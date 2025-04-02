@@ -1,0 +1,337 @@
+/* Custom styles for SAT Master */
+
+/* Increase base font size by 1px */
+html {
+    font-size: 17px; /* Default was 16px in most browsers */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    padding-top: 76px; /* Add padding to account for the fixed navbar */
+    line-height: 1.6; /* Slightly increase line height for better readability with larger text */
+}
+
+/* Flash prevention - hide content until styles are applied */
+.no-transition {
+    transition: none !important;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* Logo and brand styling */
+.navbar-brand-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto;  /* Use auto margin to push content away */
+    text-decoration: none;
+}
+
+.sat-logo {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+    transition: filter 0.3s;
+}
+
+/* Adjust navbar brand font size to maintain proportions */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem; /* Slightly increased from 1.5rem */
+    color: white;
+    margin-bottom: 0;
+}
+
+/* Theme toggle in navbar */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+/* Card styling */
+.card {
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Course page specific styling */
+.course-card .card {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.course-icon {
+    transition: transform 0.5s;
+}
+
+.course-card:hover .course-icon {
+    transform: scale(1.1);
+}
+
+
+/* Button styling */
+.btn-primary {
+    background-color: #1a73e8;
+    border-color: #1a73e8;
+}
+
+.btn-primary:hover {
+    background-color: #0d66d0;
+    border-color: #0d66d0;
+}
+
+.btn-success {
+    background-color: #34a853;
+    border-color: #34a853;
+}
+
+.btn-success:hover {
+    background-color: #2d9249;
+    border-color: #2d9249;
+}
+
+/* Footer styling */
+footer {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tighter list spacing - global */
+.list-tight {
+    padding-left: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.list-tight li {
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+}
+
+.list-tight li:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    padding-inline-start: 1em;
+  
+    > li {
+      padding-inline-start: 0.25em;
+      &::marker {
+        direction: rtl;
+      }
+    }
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.sidebar-logo {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* Adjust sidebar header font size */
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.3rem; /* Increased from 1.2rem */
+    font-weight: 600;
+    flex-grow: 1;
+}
+
+.btn-close-sidebar {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    color: #6c757d;
+}
+
+.btn-close-sidebar:hover {
+    color: #343a40;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #495057;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar-link i, .sidebar-link svg {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+    background-color: #f0f0f0;
+    color: #1a73e8;
+}
+
+/* Overlay when sidebar is open */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    display: none;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* Burger menu button - improved version with symmetrical spacing */
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    margin-right: 15px;
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px; /* Uniform thickness for all bars */
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+}
+
+/* Position the three lines with perfectly symmetrical spacing */
+.burger-menu span:nth-child(1) {
+    top: 5px; /* Equal distance from top as bottom bar is from bottom */
+}
+
+.burger-menu span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger-menu span:nth-child(3) {
+    bottom: 5px; /* Equal distance from bottom as top bar is from top */
+}
+
+/* Animation for burger menu when sidebar is open */
+body.sidebar-open .burger-menu span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+body.sidebar-open .burger-menu span:nth-child(2) {
+    opacity: 0;
+}
+
+body.sidebar-open .burger-menu span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/* Add a subtle hover effect */
+.burger-menu:hover span {
+    background-color: #e0e0e0;
+}
+
+/* Mobile adjustments for navigation */
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        font-size: 1.3rem; /* Increased from 1.2rem */
+    }
+    
+    .sat-logo {
+        height: 25px; /* Slightly smaller logo on mobile */
+    }
+    
+    .theme-toggle label {
+        width: 48px; /* Slightly smaller toggle on mobile */
+        height: 24px;
+    }
+    
+    .theme-toggle label:after {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .theme-toggle input:checked + label:after {
+        left: 47px;
+    }
+}
+
+/* Enhanced navbar link styles */
+.nav-link {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.nav-link i, .nav-link svg {
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    font-weight: 600;
+}
