@@ -1,0 +1,515 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - Advanced Linear Equations and Inequalities{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-5"><strong>Advanced Linear Equations and Inequalities</strong></h1>
+        <p class="lead">Master complex linear systems and techniques for the most challenging SAT problems</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card shadow mb-4">
+            <div class="card-body p-4">
+                <h3 class="mb-4">Advanced Linear Techniques</h3>
+                
+                <p>The most challenging SAT problems often combine multiple concepts or require innovative approaches to linear systems.</p>
+                
+                <div class="alert alert-info">
+                    <h5>Advanced Skills</h5>
+                    <ul class="mb-0">
+                        <li>Solving complex systems with three or more variables</li>
+                        <li>Using linear equations to optimize functions (max/min problems)</li>
+                        <li>Working with parametric linear equations</li>
+                        <li>Applying linear algebra to real-world modeling</li>
+                        <li>Analyzing linear constraints in multiple dimensions</li>
+                    </ul>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Complex Linear Systems</h4>
+                
+                <p>The SAT may test your ability to solve systems with three variables or unusual constraints.</p>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p class="mb-2"><strong>Example 1:</strong> Solve the system of equations:</p>
+                    <p>2x + y - z = 4</p>
+                    <p>x - 2y + 3z = 0</p>
+                    <p>3x + 2y - 2z = 3</p>
+                    
+                    <div class="steps">
+                        <p><strong>Approach:</strong> Use elimination to solve this system step by step.</p>
+                        
+                        <p><strong>Step 1:</strong> Add the first and second equations to eliminate y.</p>
+                        <p class="ms-3">2x + y - z = 4</p>
+                        <p class="ms-3">x - 2y + 3z = 0</p>
+                        <p class="ms-3">3x - y + 2z = 4</p>
+                        
+                        <p><strong>Step 2:</strong> Multiply the first equation by 2 and add it to the second to eliminate y again.</p>
+                        <p class="ms-3">4x + 2y - 2z = 8</p>
+                        <p class="ms-3">x - 2y + 3z = 0</p>
+                        <p class="ms-3">5x + z = 8</p>
+                        
+                        <p><strong>Step 3:</strong> Use the resulting equation and the third original equation to eliminate z.</p>
+                        <p class="ms-3">5x + z = 8 (multiplied by 2) → 10x + 2z = 16</p>
+                        <p class="ms-3">3x + 2y - 2z = 3</p>
+                        <p class="ms-3">Substituting: 3x + 2y - 2z = 3</p>
+                        <p class="ms-3">3x + 2y - 2z = 3</p>
+                        <p class="ms-3">3x + 2y + (10x + 2z - 16) = 3</p>
+                        <p class="ms-3">13x + 2y = 19</p>
+                        
+                        <p><strong>Step 4:</strong> Solve for x using the equations 5x + z = 8 and 3x + 2y - 2z = 3.</p>
+                        <p class="ms-3">From 5x + z = 8, we get z = 8 - 5x</p>
+                        <p class="ms-3">Substitute into 3x + 2y - 2z = 3:</p>
+                        <p class="ms-3">3x + 2y - 2(8 - 5x) = 3</p>
+                        <p class="ms-3">3x + 2y - 16 + 10x = 3</p>
+                        <p class="ms-3">13x + 2y = 19</p>
+                        
+                        <p><strong>Step 5:</strong> Use the equations z = 8 - 5x and 13x + 2y = 19 to find y in terms of x.</p>
+                        <p class="ms-3">From 2x + y - z = 4:</p>
+                        <p class="ms-3">2x + y - (8 - 5x) = 4</p>
+                        <p class="ms-3">2x + y - 8 + 5x = 4</p>
+                        <p class="ms-3">7x + y = 12</p>
+                        <p class="ms-3">y = 12 - 7x</p>
+                        
+                        <p><strong>Step 6:</strong> Substitute y = 12 - 7x into 13x + 2y = 19.</p>
+                        <p class="ms-3">13x + 2(12 - 7x) = 19</p>
+                        <p class="ms-3">13x + 24 - 14x = 19</p>
+                        <p class="ms-3">-x + 24 = 19</p>
+                        <p class="ms-3">-x = -5</p>
+                        <p class="ms-3">x = 1</p>
+                        
+                        <p><strong>Step 7:</strong> Find y and z using the values of x.</p>
+                        <p class="ms-3">y = 12 - 7(1) = 12 - 7 = 5</p>
+                        <p class="ms-3">z = 8 - 5(1) = 8 - 5 = 3</p>
+                        <p class="ms-3">Solution: x = 1, y = 5, z = 3</p>
+                    </div>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Parametric Linear Equations</h4>
+                
+                <p>Some advanced problems involve parameters that lead to different solution scenarios.</p>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p class="mb-2"><strong>Example 2:</strong> For what values of k will the system have (a) no solution, (b) exactly one solution, or (c) infinitely many solutions?</p>
+                    <p>2x + 3y = 7</p>
+                    <p>6x + ky = 21</p>
+                    
+                    <div class="steps">
+                        <p><strong>Analysis:</strong> Examine how the parameter k affects the relationship between the equations.</p>
+                        
+                        <p><strong>Step 1:</strong> Rewrite the first equation to match the coefficient of x in the second equation.</p>
+                        <p class="ms-3">2x + 3y = 7 (multiply by 3)</p>
+                        <p class="ms-3">6x + 9y = 21</p>
+                        
+                        <p><strong>Step 2:</strong> Compare with the second equation.</p>
+                        <p class="ms-3">6x + 9y = 21</p>
+                        <p class="ms-3">6x + ky = 21</p>
+                        
+                        <p><strong>Step 3:</strong> Analyze the three possible scenarios:</p>
+                        <p class="ms-3"><strong>(a) No solution:</strong> When k ≠ 9 and the equations represent parallel lines.</p>
+                        <p class="ms-3"><strong>(b) Exactly one solution:</strong> When k ≠ 9 and the lines intersect at exactly one point.</p>
+                        <p class="ms-3"><strong>(c) Infinitely many solutions:</strong> When k = 9, making the equations identical.</p>
+                        
+                        <p><strong>Conclusion:</strong></p>
+                        <p class="ms-3">If k = 9, the system has infinitely many solutions.</p>
+                        <p class="ms-3">If k ≠ 9, the system has exactly one solution.</p>
+                        <p class="ms-3">This system will never have no solution.</p>
+                    </div>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Optimization with Linear Constraints</h4>
+                
+                <p>Advanced SAT questions may ask you to find maximum or minimum values within a system of linear inequalities.</p>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p class="mb-2"><strong>Example 3:</strong> Find the maximum value of z = 3x + 2y subject to the following constraints:</p>
+                    <p>x + y ≤ 10</p>
+                    <p>x ≥ 0</p>
+                    <p>y ≥ 0</p>
+                    <p>2x + y ≤ 16</p>
+                    
+                    <div class="steps">
+                        <p><strong>Method:</strong> In linear programming problems, the maximum (or minimum) value always occurs at a vertex of the feasible region.</p>
+                        
+                        <p><strong>Step 1:</strong> Identify the vertices of the region defined by the constraints.</p>
+                        <p class="ms-3">Vertex at origin: (0, 0)</p>
+                        <p class="ms-3">Vertex where x + y = 10 and x = 0: (0, 10)</p>
+                        <p class="ms-3">Vertex where 2x + y = 16 and y = 0: (8, 0)</p>
+                        <p class="ms-3">Vertex where x + y = 10 and 2x + y = 16:</p>
+                        <p class="ms-3">Solving: 2x + y = 16 and x + y = 10</p>
+                        <p class="ms-3">Subtract equations: x = 6</p>
+                        <p class="ms-3">Therefore y = 10 - 6 = 4</p>
+                        <p class="ms-3">Fourth vertex: (6, 4)</p>
+                        
+                        <p><strong>Step 2:</strong> Evaluate z = 3x + 2y at each vertex.</p>
+                        <p class="ms-3">At (0, 0): z = 3(0) + 2(0) = 0</p>
+                        <p class="ms-3">At (0, 10): z = 3(0) + 2(10) = 20</p>
+                        <p class="ms-3">At (8, 0): z = 3(8) + 2(0) = 24</p>
+                        <p class="ms-3">At (6, 4): z = 3(6) + 2(4) = 18 + 8 = 26</p>
+                        
+                        <p><strong>Step 3:</strong> Determine the maximum value.</p>
+                        <p class="ms-3">The maximum value of z = 3x + 2y is 26, occurring at the point (6, 4).</p>
+                    </div>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Advanced Inequalities with Absolute Values</h4>
+                
+                <p>Complex inequality problems often involve absolute values and multiple variables.</p>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p class="mb-2"><strong>Example 4:</strong> Find the set of values of x that satisfy: |2x - 3| + |x + 1| ≤ 7</p>
+                    
+                    <div class="steps">
+                        <p><strong>Strategy:</strong> Break this into cases based on when each absolute value is positive or negative.</p>
+                        
+                        <p><strong>Case 1:</strong> When 2x - 3 ≥ 0 and x + 1 ≥ 0</p>
+                        <p class="ms-3">2x - 3 ≥ 0 implies x ≥ 3/2</p>
+                        <p class="ms-3">x + 1 ≥ 0 implies x ≥ -1</p>
+                        <p class="ms-3">In this region (x ≥ 3/2), the inequality becomes:</p>
+                        <p class="ms-3">(2x - 3) + (x + 1) ≤ 7</p>
+                        <p class="ms-3">3x - 2 ≤ 7</p>
+                        <p class="ms-3">3x ≤ 9</p>
+                        <p class="ms-3">x ≤ 3</p>
+                        <p class="ms-3">Combined with x ≥ 3/2, this gives 3/2 ≤ x ≤ 3 for Case 1.</p>
+                        
+                        <p><strong>Case 2:</strong> When 2x - 3 ≥ 0 and x + 1 < 0</p>
+                        <p class="ms-3">2x - 3 ≥ 0 implies x ≥ 3/2</p>
+                        <p class="ms-3">x + 1 < 0 implies x < -1</p>
+                        <p class="ms-3">These conditions are contradictory (x cannot be both ≥ 3/2 and < -1), so Case 2 yields no solutions.</p>
+                        
+                        <p><strong>Case 3:</strong> When 2x - 3 < 0 and x + 1 ≥ 0</p>
+                        <p class="ms-3">2x - 3 < 0 implies x < 3/2</p>
+                        <p class="ms-3">x + 1 ≥ 0 implies x ≥ -1</p>
+                        <p class="ms-3">In this region (-1 ≤ x < 3/2), the inequality becomes:</p>
+                        <p class="ms-3">-(2x - 3) + (x + 1) ≤ 7</p>
+                        <p class="ms-3">-2x + 3 + x + 1 ≤ 7</p>
+                        <p class="ms-3">-x + 4 ≤ 7</p>
+                        <p class="ms-3">-x ≤ 3</p>
+                        <p class="ms-3">x ≥ -3</p>
+                        <p class="ms-3">Combined with -1 ≤ x < 3/2, this gives -1 ≤ x < 3/2 for Case 3.</p>
+                        
+                        <p><strong>Case 4:</strong> When 2x - 3 < 0 and x + 1 < 0</p>
+                        <p class="ms-3">2x - 3 < 0 implies x < 3/2</p>
+                        <p class="ms-3">x + 1 < 0 implies x < -1</p>
+                        <p class="ms-3">In this region (x < -1), the inequality becomes:</p>
+                        <p class="ms-3">-(2x - 3) + -(x + 1) ≤ 7</p>
+                        <p class="ms-3">-2x + 3 - x - 1 ≤ 7</p>
+                        <p class="ms-3">-3x + 2 ≤ 7</p>
+                        <p class="ms-3">-3x ≤ 5</p>
+                        <p class="ms-3">x ≥ -5/3</p>
+                        <p class="ms-3">Combined with x < -1, this gives -5/3 ≤ x < -1 for Case 4.</p>
+                        
+                        <p><strong>Combining all cases:</strong> The solution set is -5/3 ≤ x ≤ 3 (excluding the interval between -1 and -5/3).</p>
+                        <p class="ms-3">Final answer: -5/3 ≤ x ≤ 3</p>
+                    </div>
+                </div>
+                
+                <div class="practice-section mt-5 p-4 bg-light rounded">
+                    <h4 class="mb-3">Advanced Practice Questions</h4>
+                    
+                    <div class="question mb-4">
+                        <p><strong>1.</strong> Find all values of k such that the system of equations has infinitely many solutions:</p>
+                        <p>4x - 3y = 7</p>
+                        <p>kx - 6y = 14</p>
+                        <p class="solution collapse" id="solution1">
+                            For infinitely many solutions, the equations must be scalar multiples of each other.
+                            <br>
+                            Let's examine the ratios of the coefficients in the two equations:
+                            <br>
+                            4/-3 = k/-6 = 7/14
+                            <br>
+                            4/-3 = k/-6
+                            <br>
+                            -8 = -k
+                            <br>
+                            k = 8
+                            <br>
+                            And checking: 7/14 = 1/2 and 4/-3 = -4/3
+                            <br>
+                            So they're not equal. This means we need another check.
+                            <br>
+                            Let's rewrite both equations in the form ax + by = c:
+                            <br>
+                            4x - 3y = 7
+                            <br>
+                            kx - 6y = 14
+                            <br>
+                            For these to be the same line, we need:
+                            <br>
+                            4/k = -3/-6 = 7/14
+                            <br>
+                            4/k = 3/6 = 1/2
+                            <br>
+                            4/k = 1/2
+                            <br>
+                            8/k = 1
+                            <br>
+                            k = 8
+                            <br>
+                            Therefore, k = 8 is the only value for which the system has infinitely many solutions.
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution1">Show Solution</button>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>2.</strong> Find the minimum value of 2x + 5y subject to:</p>
+                        <p>x ≥ 0, y ≥ 0, x + y ≥ 8, 3x + y ≥ 12</p>
+                        <p class="solution collapse" id="solution2">
+                            In linear optimization, the minimum value occurs at one of the vertices of the feasible region.
+                            <br>
+                            Let's find the vertices by determining where the constraints intersect.
+                            <br>
+                            Vertex 1: (0, 12) - where x = 0 meets 3x + y = 12
+                            <br>
+                            Vertex 2: (4, 0) - where y = 0 meets 3x + y = 12
+                            <br>
+                            Vertex 3: (0, 8) - where x = 0 meets x + y = 8
+                            <br>
+                            Vertex 4: Intersection of x + y = 8 and 3x + y = 12
+                            <br>
+                            Solving: 3x + y = 12 and x + y = 8
+                            <br>
+                            Substituting y = 8 - x into 3x + y = 12:
+                            <br>
+                            3x + (8 - x) = 12
+                            <br>
+                            3x + 8 - x = 12
+                            <br>
+                            2x = 4
+                            <br>
+                            x = 2
+                            <br>
+                            y = 8 - 2 = 6
+                            <br>
+                            Vertex 4: (2, 6)
+                            <br>
+                            Now evaluate 2x + 5y at each vertex:
+                            <br>
+                            At (0, 12): 2(0) + 5(12) = 60
+                            <br>
+                            At (4, 0): 2(4) + 5(0) = 8
+                            <br>
+                            At (0, 8): 2(0) + 5(8) = 40
+                            <br>
+                            At (2, 6): 2(2) + 5(6) = 4 + 30 = 34
+                            <br>
+                            The minimum value is 8, occurring at the point (4, 0).
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution2">Show Solution</button>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>3.</strong> Determine the values of x for which: |x² - 4x + 3| ≤ |x - 1|</p>
+                        <p class="solution collapse" id="solution3">
+                            First, factor the quadratic: |x² - 4x + 3| = |(x - 3)(x - 1)|
+                            <br>
+                            Our inequality becomes: |(x - 3)(x - 1)| ≤ |x - 1|
+                            <br>
+                            Case 1: If x - 1 = 0, then x = 1.
+                            <br>
+                            In this case, both sides equal 0, so x = 1 is a solution.
+                            <br>
+                            For x ≠ 1, we can divide both sides by |x - 1| to get:
+                            <br>
+                            |x - 3| ≤ 1
+                            <br>
+                            This is equivalent to: -1 ≤ x - 3 ≤ 1
+                            <br>
+                            2 ≤ x ≤ 4
+                            <br>
+                            Combining with the x = 1 solution:
+                            <br>
+                            The answer is x = 1 or 2 ≤ x ≤ 4.
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution3">Show Solution</button>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>4.</strong> If 3 < |2x - 1| ≤ 5, what is the sum of all possible integer values of x?</p>
+                        <p class="solution collapse" id="solution4">
+                            Let's solve the compound inequality: 3 < |2x - 1| ≤ 5
+                            <br>
+                            Case 1: When 2x - 1 ≥ 0, we have:
+                            <br>
+                            3 < 2x - 1 ≤ 5
+                            <br>
+                            4 < 2x ≤ 6
+                            <br>
+                            2 < x ≤ 3
+                            <br>
+                            So x = 3 is the only integer solution in this case.
+                            <br>
+                            Case 2: When 2x - 1 < 0, we have:
+                            <br>
+                            3 < -(2x - 1) ≤ 5
+                            <br>
+                            3 < -2x + 1 ≤ 5
+                            <br>
+                            2 < -2x ≤ 4
+                            <br>
+                            -2 > x ≥ -1
+                            <br>
+                            -2 ≥ x > -1
+                            <br>
+                            So x = -2 is the only integer solution in this case.
+                            <br>
+                            The possible integer values are x = -2 and x = 3.
+                            <br>
+                            Therefore, the sum is -2 + 3 = 1.
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution4">Show Solution</button>
+                    </div>
+                    
+                    <div class="question">
+                        <p><strong>5.</strong> A system of linear equations is given by:
+                           <br>ax + by = c
+                           <br>dx + ey = f
+                           <br>If ad - be ≠ 0, express the solution (x, y) in terms of the coefficients a, b, c, d, e, and f.</p>
+                        <p class="solution collapse" id="solution5">
+                            This is a general solution using Cramer's rule.
+                            <br>
+                            Since ad - be ≠ 0, the system has a unique solution.
+                            <br>
+                            By Cramer's rule:
+                            <br>
+                            x = (ce - bf)/(ae - bd)
+                            <br>
+                            But there's an error in my setup. Let me correct:
+                            <br>
+                            The determinant of the coefficient matrix is:
+                            <br>
+                            |a b|
+                            <br>
+                            |d e| = ae - bd
+                            <br>
+                            But the condition is ad - be ≠ 0, which is not the same.
+                            <br>
+                            Let me recalculate with the correct determinant:
+                            <br>
+                            The determinant is actually:
+                            <br>
+                            |a b|
+                            <br>
+                            |d e| = ae - bd
+                            <br>
+                            For x, we replace the first column with constants:
+                            <br>
+                            |c b|
+                            <br>
+                            |f e| = ce - bf
+                            <br>
+                            For y, we replace the second column with constants:
+                            <br>
+                            |a c|
+                            <br>
+                            |d f| = af - cd
+                            <br>
+                            Therefore:
+                            <br>
+                            x = (ce - bf)/(ae - bd)
+                            <br>
+                            y = (af - cd)/(ae - bd)
+                            <br>
+                            Now, to match the given condition ad - be ≠ 0:
+                            <br>
+                            Note that ae - bd = ae - bd, which is different from ad - be.
+                            <br>
+                            We need to rewrite the solution properly:
+                            <br>
+                            Using Cramer's rule correctly:
+                            <br>
+                            x = (ce - bf)/(ae - bd)
+                            <br>
+                            y = (af - cd)/(ae - bd)
+                            <br>
+                            Since the condition given is ad - be ≠ 0 (which is actually the negative of the determinant we calculated), the final solution is:
+                            <br>
+                            x = (bf - ce)/(be - ad)
+                            <br>
+                            y = (cd - af)/(be - ad)
+                            <br>
+                            Simplifying by negating both numerator and denominator:
+                            <br>
+                            x = (ce - bf)/(ad - be)
+                            <br>
+                            y = (af - cd)/(ad - be)
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution5">Show Solution</button>
+                    </div>
+                </div>
+                
+                <div class="sat-tips mt-5 p-4 bg-warning bg-opacity-10 rounded">
+                    <h4 class="mb-3">Advanced SAT Strategies</h4>
+                    <ul class="mb-0">
+                        <li>For complex systems, consider using matrices and determinants when available.</li>
+                        <li>In parametric problems, carefully analyze what happens at boundary cases where the parameter creates distinct behaviors.</li>
+                        <li>When optimizing linear functions, remember that maximum/minimum values occur at vertices.</li>
+                        <li>For absolute value inequalities, always consider all possible sign combinations.</li>
+                        <li>Practice identifying when a problem is asking for a specific type of solution (no solution, unique solution, infinite solutions).</li>
+                        <li>Master simplification techniques to reduce complex expressions before solving.</li>
+                    </ul>
+                </div>
+                
+                <div class="navigation-buttons d-flex justify-content-between mt-5">
+                    <a href="{{ url_for('algebra_intermediate_linear_equations') }}" class="btn btn-primary">« Back to Intermediate Linear Equations</a>
+                    <a href="{{ url_for('algebra_beginner') }}" class="btn btn-success">Return to Algebra Topics</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .example-box, .technique {
+        background-color: #f8f9fa;
+    }
+    
+    .solution {
+        background-color: #e9ecef;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        margin-bottom: 0.5rem;
+        white-space: pre-line;
+    }
+    
+    .technique h5,
+    .example-box h5 {
+        font-weight: bold;
+    }
+    
+    .steps {
+        margin-left: 1rem;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Bootstrap JS for collapse functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof bootstrap === 'undefined') {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+            script.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }
+    });
+    
+    // MathJax for mathematical notation
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!window.MathJax) {
+            var script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+            script.async = true;
+            document.head.appendChild(script);
+        }
+    });
+</script>
+{% endblock %}

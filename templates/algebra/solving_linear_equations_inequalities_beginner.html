@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - Solving Linear Equations and Inequalities{% endblock %}
+
+{% block content %}
+
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-5"><strong>Solving Linear Equations and Inequalities</strong></h1>
+        <p class="lead">Master the fundamental skills for solving linear equations on the SAT</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card shadow mb-4">
+            <div class="card-body p-4">
+                <h3 class="mb-4">Introduction to Linear Equations</h3>
+                
+                <p>Linear equations are the foundation of algebra and appear frequently on the SAT. A linear equation can be written in the form: <strong>ax + b = c</strong>, where a, b, and c are constants.</p>
+                
+                <div class="alert alert-info">
+                    <h5>Key Concepts</h5>
+                    <ul class="mb-0">
+                        <li>Isolating variables by performing operations on both sides of the equation</li>
+                        <li>Combining like terms</li>
+                        <li>Identifying solutions vs. no solution vs. infinite solutions</li>
+                        <li>Multi-step equation solving techniques</li>
+                    </ul>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Basic Steps for Solving Linear Equations</h4>
+                
+                <p>The basic principle of solving any equation is to perform the same operation on both sides to maintain equality. Keep these steps in mind:</p>
+                <ol>
+                    <li>Simplify both sides of the equation by combining like terms</li>
+                    <li>Use addition or subtraction to isolate variable terms on one side</li>
+                    <li>Use multiplication or division to solve for the variable</li>
+                    <li>Check your solution in the original equation</li>
+                </ol>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p class="mb-2"><strong>Example 1:</strong> Solve for x in 3x + 7 = 4x - 5</p>
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Group all variable terms on one side and constants on the other.</p>
+                        <p class="ms-3">3x - 4x = -5 - 7</p>
+                        
+                        <p><strong>Step 2:</strong> Simplify both sides.</p>
+                        <p class="ms-3">-x = -12</p>
+                        
+                        <p><strong>Step 3:</strong> Solve for the variable.</p>
+                        <p class="ms-3">x = 12</p>
+                        
+                        <p><strong>Step 4:</strong> Verify your solution.</p>
+                        <p class="ms-3">3(12) + 7 = 4(12) - 5</p>
+                        <p class="ms-3">36 + 7 = 48 - 5</p>
+                        <p class="ms-3">43 = 43 ✓</p>
+                    </div>
+                </div>
+
+                <h4 class="mt-5 mb-3">Special Cases in Linear Equations</h4>
+                
+                <p>The SAT often tests your understanding of these special cases:</p>
+                
+                <div class="special-cases mb-4">
+                    <div class="case-box p-3 mb-3 border rounded">
+                        <h5>No Solution</h5>
+                        <p>When you end up with a false statement like <strong>0 = 5</strong>, the equation has no solution.</p>
+                        <p><strong>Example:</strong> 2x + 3 = 2x - 1</p>
+                        <p class="ms-3">2x - 2x = -1 - 3</p>
+                        <p class="ms-3">0 = -4 (False statement)</p>
+                        <p class="ms-3">Therefore, there is no solution.</p>
+                    </div>
+                    
+                    <div class="case-box p-3 border rounded">
+                        <h5>Infinite Solutions</h5>
+                        <p>When you end up with a true statement like <strong>0 = 0</strong>, the equation has infinitely many solutions.</p>
+                        <p><strong>Example:</strong> 3(x - 2) = 3x - 6</p>
+                        <p class="ms-3">3x - 6 = 3x - 6</p>
+                        <p class="ms-3">0 = 0 (True statement)</p>
+                        <p class="ms-3">Therefore, all real values of x are solutions.</p>
+                    </div>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Linear Inequalities</h4>
+                
+                <p>Linear inequalities are similar to linear equations but use inequality symbols (<, >, ≤, ≥) instead of equals signs. The key difference is that when you multiply or divide both sides by a negative number, you must flip the inequality sign.</p>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p class="mb-2"><strong>Example 2:</strong> Solve for x in -2x + 3 > 7</p>
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Isolate the variable term.</p>
+                        <p class="ms-3">-2x > 7 - 3</p>
+                        <p class="ms-3">-2x > 4</p>
+                        
+                        <p><strong>Step 2:</strong> Solve for the variable. Since we're dividing by a negative number (-2), we need to flip the inequality sign.</p>
+                        <p class="ms-3">x < -2</p>
+                    </div>
+                </div>
+                
+                <div class="alert alert-warning mb-4">
+                    <h5>Common Mistake: Forgetting to Flip the Sign</h5>
+                    <p class="mb-0">One of the most common errors on the SAT is forgetting to flip the inequality sign when multiplying or dividing by a negative number. Always double-check your work when dealing with negatives and inequalities!</p>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Compound Inequalities</h4>
+                
+                <p>The SAT may include compound inequalities, which involve two inequality conditions at once.</p>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p class="mb-2"><strong>Example 3:</strong> Solve for x in -3 < 2x + 1 < 7</p>
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Solve each part of the inequality separately.</p>
+                        <p class="ms-3">-3 < 2x + 1 and 2x + 1 < 7</p>
+                        
+                        <p><strong>Step 2:</strong> Subtract 1 from all parts.</p>
+                        <p class="ms-3">-4 < 2x and 2x < 6</p>
+                        
+                        <p><strong>Step 3:</strong> Divide all parts by 2.</p>
+                        <p class="ms-3">-2 < x and x < 3</p>
+                        
+                        <p><strong>Step 4:</strong> Write as a single inequality.</p>
+                        <p class="ms-3">-2 < x < 3</p>
+                    </div>
+                </div>
+                
+                <div class="practice-section mt-5 p-4 bg-light rounded">
+                    <h4 class="mb-3">Practice Questions</h4>
+                    
+                    <div class="question mb-4">
+                        <p><strong>1.</strong> Solve for x: 5x - 3 = 2x + 9</p>
+                        <p class="solution collapse" id="solution1">
+                            5x - 3 = 2x + 9<br>
+                            5x - 2x = 9 + 3<br>
+                            3x = 12<br>
+                            x = 4
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution1">Show Solution</button>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>2.</strong> Solve for x: 3(x + 2) - 4 = 2(x - 1) + 5</p>
+                        <p class="solution collapse" id="solution2">
+                            3(x + 2) - 4 = 2(x - 1) + 5<br>
+                            3x + 6 - 4 = 2x - 2 + 5<br>
+                            3x + 2 = 2x + 3<br>
+                            3x - 2x = 3 - 2<br>
+                            x = 1
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution2">Show Solution</button>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>3.</strong> Solve for the inequality: -4x + 5 ≤ -3</p>
+                        <p class="solution collapse" id="solution3">
+                            -4x + 5 ≤ -3<br>
+                            -4x ≤ -3 - 5<br>
+                            -4x ≤ -8<br>
+                            x ≥ 2 (Remember to flip the inequality sign when dividing by a negative)
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution3">Show Solution</button>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>4.</strong> Which value of x is a solution to 3(2x - 4) = 6x - 12?</p>
+                        <p class="solution collapse" id="solution4">
+                            3(2x - 4) = 6x - 12<br>
+                            6x - 12 = 6x - 12<br>
+                            0 = 0<br>
+                            This equation has infinitely many solutions. Any value of x would work.
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution4">Show Solution</button>
+                    </div>
+                    
+                    <div class="question">
+                        <p><strong>5.</strong> Solve for the compound inequality: -1 ≤ 3x - 5 < 7</p>
+                        <p class="solution collapse" id="solution5">
+                            -1 ≤ 3x - 5 < 7<br>
+                            -1 + 5 ≤ 3x < 7 + 5<br>
+                            4 ≤ 3x < 12<br>
+                            4/3 ≤ x < 4<br>
+                            So the solution is: 4/3 ≤ x < 4
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution5">Show Solution</button>
+                    </div>
+                </div>
+                
+                <div class="sat-tips mt-5 p-4 bg-warning bg-opacity-10 rounded">
+                    <h4 class="mb-3">SAT Tips</h4>
+                    <ul class="mb-0">
+                        <li>Always read the problem carefully to understand what variable you are solving for.</li>
+                        <li>Show your work neatly to avoid careless errors.</li>
+                        <li>Check your answer by substituting it back into the original equation.</li>
+                        <li>Watch out for special cases where the solution might be "no solution" or "infinite solutions."</li>
+                        <li>Be careful with negative coefficients in inequalities - don't forget to flip the sign!</li>
+                        <li>On the SAT, look for shortcuts - sometimes you can test answer choices rather than solving the full equation.</li>
+                    </ul>
+                </div>
+                
+                <div class="next-steps text-center mt-5">
+                    <h4 class="mb-3">Ready to Continue?</h4>
+                    <a href="{{ url_for('algebra_beginner_word_problems') }}" class="btn btn-success">Next Topic: Linear Equation Word Problems</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .example-box, .case-box {
+        background-color: #f8f9fa;
+    }
+    
+    .solution {
+        background-color: #e9ecef;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        margin-bottom: 0.5rem;
+        white-space: pre-line;
+    }
+    
+    /* Removed specific coloring for case-box h5 elements to use default text color */
+    .case-box h5 {
+        font-weight: bold;
+    }
+    
+    /* Dark mode will automatically use the appropriate text color */
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Bootstrap JS for collapse functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof bootstrap === 'undefined') {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+            script.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }
+    });
+</script>
+{% endblock %}

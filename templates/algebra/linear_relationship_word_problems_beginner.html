@@ -1,0 +1,255 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - Linear Relationship Word Problems{% endblock %}
+
+{% block content %}
+
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-5"><strong>Linear Relationship Word Problems</strong></h1>
+        <p class="lead">Understanding and applying linear relationships in real-world contexts</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card shadow mb-4">
+            <div class="card-body p-4">
+                <h3 class="mb-4">Linear Relationships in Context</h3>
+                
+                <p>Linear relationship problems involve identifying and using linear patterns between two variables. These questions often ask you to find rates, interpret slopes and y-intercepts, and make predictions based on linear models.</p>
+                
+                <div class="alert alert-info">
+                    <h5>Key Concepts to Remember</h5>
+                    <ul class="mb-0">
+                        <li>Slope represents rate of change (e.g., cost per unit, speed)</li>
+                        <li>Y-intercept often represents an initial value or fixed cost</li>
+                        <li>Linear equation format: y = mx + b</li>
+                        <li>Direct proportions: y = kx (where k is the constant of proportionality)</li>
+                    </ul>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Rate and Unit Rate Problems</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example:</strong> A car travels 240 miles using 8 gallons of gas. At this rate, how many gallons of gas would the car use to travel 360 miles?</p>
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Find the unit rate (miles per gallon).</p>
+                        <p class="ms-3">240 miles ÷ 8 gallons = 30 miles per gallon</p>
+                        
+                        <p><strong>Step 2:</strong> Use the rate to find the answer.</p>
+                        <p class="ms-3">360 miles ÷ 30 miles per gallon = 12 gallons</p>
+                        
+                        <p><strong>Alternative method:</strong> Set up a proportion.</p>
+                        <p class="ms-3">8 gallons / 240 miles = x gallons / 360 miles</p>
+                        <p class="ms-3">8/240 = x/360</p>
+                        <p class="ms-3">8 × 360 = 240 × x</p>
+                        <p class="ms-3">2,880 = 240x</p>
+                        <p class="ms-3">x = 12 gallons</p>
+                    </div>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Cost and Revenue Models</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example:</strong> A small business has fixed costs of $1,200 per month and variable costs of $15 per unit produced. The business sells each unit for $40.</p>
+                    <p>a) Write an equation for the total monthly cost (C) in terms of the number of units (n) produced.</p>
+                    <p>b) Write an equation for the total monthly revenue (R) in terms of the number of units (n) sold.</p>
+                    <p>c) How many units must be sold for the business to break even (Revenue = Cost)?</p>
+                    
+                    <div class="steps">
+                        <p><strong>a) Cost equation:</strong></p>
+                        <p class="ms-3">Total cost = Fixed costs + Variable costs</p>
+                        <p class="ms-3">C = 1,200 + 15n</p>
+                        
+                        <p><strong>b) Revenue equation:</strong></p>
+                        <p class="ms-3">Revenue = Price per unit × Number of units</p>
+                        <p class="ms-3">R = 40n</p>
+                        
+                        <p><strong>c) Break-even point:</strong></p>
+                        <p class="ms-3">Revenue = Cost</p>
+                        <p class="ms-3">40n = 1,200 + 15n</p>
+                        <p class="ms-3">40n - 15n = 1,200</p>
+                        <p class="ms-3">25n = 1,200</p>
+                        <p class="ms-3">n = 48 units</p>
+                    </div>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Distance-Time-Rate Problems</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example:</strong> Jesse rides his bike at a constant speed of 12 miles per hour. Write a linear equation that relates the distance (d) traveled to the time (t) in hours. Then calculate how long it will take Jesse to travel 42 miles.</p>
+                    
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Write the linear equation.</p>
+                        <p class="ms-3">d = 12t</p>
+                        <p class="ms-3">Where d is distance in miles and t is time in hours</p>
+                        
+                        <p><strong>Step 2:</strong> Solve for the time to travel 42 miles.</p>
+                        <p class="ms-3">42 = 12t</p>
+                        <p class="ms-3">t = 42 ÷ 12 = 3.5 hours</p>
+                        <p class="ms-3">3.5 hours = 3 hours and 30 minutes</p>
+                    </div>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Linear Growth and Depreciation</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example:</strong> A new car valued at $25,000 depreciates by $3,000 per year. Write a linear equation for the car's value (V) after t years. How much will the car be worth after 4 years?</p>
+                    
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Identify the initial value and rate of change.</p>
+                        <p class="ms-3">Initial value = $25,000</p>
+                        <p class="ms-3">Rate of change = -$3,000 per year (negative because the value decreases)</p>
+                        
+                        <p><strong>Step 2:</strong> Write the linear equation in slope-intercept form.</p>
+                        <p class="ms-3">V = -3,000t + 25,000</p>
+                        
+                        <p><strong>Step 3:</strong> Calculate the value after 4 years.</p>
+                        <p class="ms-3">V = -3,000(4) + 25,000</p>
+                        <p class="ms-3">V = -12,000 + 25,000</p>
+                        <p class="ms-3">V = $13,000</p>
+                    </div>
+                </div>
+                
+                <div class="practice-section mt-5 p-4 bg-light rounded">
+                    <h4 class="mb-3">Practice Questions</h4>
+                    
+                    <div class="question mb-4">
+                        <p><strong>1.</strong> A taxi charges $2.50 for the first mile and $1.75 for each additional mile. Write a linear equation for the total fare (F) in terms of the distance (d) in miles (where d ≥ 1). Then find the fare for a 7-mile trip.</p>
+                        <p class="solution collapse" id="solution1">
+                            For d ≥ 1:
+                            F = 2.50 + 1.75(d - 1)
+                            F = 2.50 + 1.75d - 1.75
+                            F = 0.75 + 1.75d
+                            
+                            For a 7-mile trip:
+                            F = 0.75 + 1.75(7)
+                            F = 0.75 + 12.25
+                            F = $13.00
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution1">Show Solution</button>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>2.</strong> A water tank initially has 500 gallons of water. Water is being drained at a constant rate of 25 gallons per minute.</p>
+                        <p>a) Write an equation for the amount of water (W) in the tank after t minutes.</p>
+                        <p>b) How long will it take for the tank to be half full?</p>
+                        <p class="solution collapse" id="solution2">
+                            a) Initial amount minus what's drained:
+                            W = 500 - 25t
+                            
+                            b) To find when the tank is half full (250 gallons):
+                            250 = 500 - 25t
+                            -250 = -25t
+                            t = 10 minutes
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution2">Show Solution</button>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>3.</strong> A company charges a monthly subscription fee of $10 plus $5 per hour of service used. If a customer's bill for one month is $45, how many hours of service did they use?</p>
+                        <p class="solution collapse" id="solution3">
+                            Let h = hours of service
+                            Total bill = Monthly fee + Hourly fee × Hours
+                            45 = 10 + 5h
+                            35 = 5h
+                            h = 7 hours
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution3">Show Solution</button>
+                    </div>
+                </div>
+                
+                <div class="sat-tips mt-5 p-4 bg-warning bg-opacity-10 rounded">
+                    <h4 class="mb-3">SAT Tips for Linear Relationship Problems</h4>
+                    <ul class="mb-0">
+                        <li>Identify the components of the linear model (slope and y-intercept) and understand what they represent in the given context.</li>
+                        <li>Remember that the slope represents the rate of change (for each unit increase in x, y increases by the slope value).</li>
+                        <li>Pay attention to units and ensure they're consistent throughout your solution.</li>
+                        <li>When interpreting models, consider whether the relationship makes sense over the entire domain or only for a restricted range of values.</li>
+                        <li>Watch out for "hidden" fixed costs or starting values that might not be explicitly stated but can be inferred from the problem.</li>
+                    </ul>
+                </div>
+                
+                <div class="next-steps text-center mt-5">
+                    <a href="{{ url_for('algebra_beginner_word_problems') }}" class="btn btn-outline-secondary me-2">
+                        <i class="fas fa-arrow-left me-1"></i> Previous Topic
+                    </a>
+                    <a href="{{ url_for('algebra_beginner_graphs') }}" class="btn btn-success">
+                        Next Topic <i class="fas fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .example-box {
+        background-color: #f8f9fa;
+    }
+    
+    body.dark-mode .example-box {
+        background-color: #2d2d2d;
+        border-color: #444 !important;
+    }
+    
+    body.dark-mode .practice-section {
+        background-color: #2d2d2d !important;
+    }
+    
+    body.dark-mode .sat-tips {
+        background-color: rgba(255, 193, 7, 0.05) !important;
+    }
+    
+    /* Ensure key concepts text color doesn't change in dark mode */
+    .alert-info {
+        color: #0c5460;
+    }
+    
+    body.dark-mode .alert-info {
+        background-color: rgba(23, 162, 184, 0.15) !important;
+        border-color: rgba(23, 162, 184, 0.3) !important;
+        color: #0c5460 !important;
+    }
+    
+    .solution {
+        background-color: #e9ecef;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        margin-bottom: 0.5rem;
+        white-space: pre-line;
+    }
+    
+    body.dark-mode .solution {
+        background-color: #3a3a3a;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Add Font Awesome for icons
+    if (!document.getElementById('font-awesome')) {
+        var link = document.createElement('link');
+        link.id = 'font-awesome';
+        link.rel = 'stylesheet';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+        document.head.appendChild(link);
+    }
+    
+    // Bootstrap JS for collapse functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof bootstrap === 'undefined') {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+            script.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }
+    });
+</script>
+{% endblock %}

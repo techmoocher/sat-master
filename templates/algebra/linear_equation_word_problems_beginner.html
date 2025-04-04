@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - Linear Equation Word Problems{% endblock %}
+
+{% block content %}
+
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-5"><strong>Linear Equation Word Problems</strong></h1>
+        <p class="lead">Learn how to translate real-world scenarios into linear equations</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card shadow mb-4">
+            <div class="card-body p-4">
+                <h3 class="mb-4">Translating Words to Equations</h3>
+                
+                <p>One of the most common types of problems on the SAT Math section involves translating word problems into linear equations. These problems test your ability to identify variables, establish relationships, and solve for unknowns.</p>
+                
+                <div class="alert alert-info">
+                    <h5>Key Problem-Solving Steps</h5>
+                    <ol class="mb-0">
+                        <li>Identify what you're solving for and assign a variable (e.g., x)</li>
+                        <li>Identify any other unknowns in terms of your variable</li>
+                        <li>Translate the word problem into an equation</li>
+                        <li>Solve the equation</li>
+                        <li>Check if your answer makes sense in the context of the problem</li>
+                    </ol>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Common Types of Word Problems</h4>
+                
+                <div class="problem-type mb-4">
+                    <h5 class="bg-primary text-white p-2 rounded">Age Problems</h5>
+                    <div class="example-box p-3 mb-3 border rounded">
+                        <p><strong>Example:</strong> John is 5 years older than Maria. The sum of their ages is 37. How old is each person?</p>
+                        <div class="steps">
+                            <p><strong>Step 1:</strong> Assign a variable.</p>
+                            <p class="ms-3">Let x = Maria's age</p>
+                            
+                            <p><strong>Step 2:</strong> Express John's age in terms of x.</p>
+                            <p class="ms-3">John's age = x + 5</p>
+                            
+                            <p><strong>Step 3:</strong> Write an equation based on the given information.</p>
+                            <p class="ms-3">Maria's age + John's age = 37</p>
+                            <p class="ms-3">x + (x + 5) = 37</p>
+                            <p class="ms-3">2x + 5 = 37</p>
+                            
+                            <p><strong>Step 4:</strong> Solve for x.</p>
+                            <p class="ms-3">2x = 32</p>
+                            <p class="ms-3">x = 16</p>
+                            
+                            <p><strong>Step 5:</strong> Find both ages.</p>
+                            <p class="ms-3">Maria's age = 16</p>
+                            <p class="ms-3">John's age = 16 + 5 = 21</p>
+                            
+                            <p><strong>Step 6:</strong> Verify.</p>
+                            <p class="ms-3">16 + 21 = 37 ✓</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="problem-type mb-4">
+                    <h5 class="bg-success text-white p-2 rounded">Money Problems</h5>
+                    <div class="example-box p-3 mb-3 border rounded">
+                        <p><strong>Example:</strong> Sarah has $5 bills and $10 bills in her wallet. She has a total of 12 bills worth $95. How many of each type of bill does she have?</p>
+                        <div class="steps">
+                            <p><strong>Step 1:</strong> Assign a variable.</p>
+                            <p class="ms-3">Let x = number of $5 bills</p>
+                            
+                            <p><strong>Step 2:</strong> Express the number of $10 bills in terms of x.</p>
+                            <p class="ms-3">Number of $10 bills = 12 - x</p>
+                            
+                            <p><strong>Step 3:</strong> Write an equation based on the total value.</p>
+                            <p class="ms-3">5x + 10(12 - x) = 95</p>
+                            <p class="ms-3">5x + 120 - 10x = 95</p>
+                            <p class="ms-3">-5x + 120 = 95</p>
+                            
+                            <p><strong>Step 4:</strong> Solve for x.</p>
+                            <p class="ms-3">-5x = -25</p>
+                            <p class="ms-3">x = 5</p>
+                            
+                            <p><strong>Step 5:</strong> Find the number of each type of bill.</p>
+                            <p class="ms-3">Number of $5 bills = 5</p>
+                            <p class="ms-3">Number of $10 bills = 12 - 5 = 7</p>
+                            
+                            <p><strong>Step 6:</strong> Verify.</p>
+                            <p class="ms-3">5 + 7 = 12 bills ✓</p>
+                            <p class="ms-3">$5 × 5 + $10 × 7 = $25 + $70 = $95 ✓</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="problem-type mb-4">
+                    <h5 class="bg-warning text-dark p-2 rounded">Mixture Problems</h5>
+                    <div class="example-box p-3 mb-3 border rounded">
+                        <p><strong>Example:</strong> A chemist needs to create 100 mL of a 25% acid solution. If she has a 10% acid solution and a 50% acid solution, how much of each should she mix?</p>
+                        <div class="steps">
+                            <p><strong>Step 1:</strong> Assign a variable.</p>
+                            <p class="ms-3">Let x = amount of 10% solution (in mL)</p>
+                            
+                            <p><strong>Step 2:</strong> Express the amount of 50% solution in terms of x.</p>
+                            <p class="ms-3">Amount of 50% solution = 100 - x mL</p>
+                            
+                            <p><strong>Step 3:</strong> Write an equation based on the amount of pure acid.</p>
+                            <p class="ms-3">Amount of acid from 10% solution + Amount of acid from 50% solution = Amount of acid in final solution</p>
+                            <p class="ms-3">0.10x + 0.50(100 - x) = 0.25(100)</p>
+                            <p class="ms-3">0.10x + 50 - 0.50x = 25</p>
+                            <p class="ms-3">-0.40x + 50 = 25</p>
+                            
+                            <p><strong>Step 4:</strong> Solve for x.</p>
+                            <p class="ms-3">-0.40x = -25</p>
+                            <p class="ms-3">x = 62.5</p>
+                            
+                            <p><strong>Step 5:</strong> Find the amount of each solution.</p>
+                            <p class="ms-3">Amount of 10% solution = 62.5 mL</p>
+                            <p class="ms-3">Amount of 50% solution = 100 - 62.5 = 37.5 mL</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="practice-section mt-5 p-4 bg-light rounded">
+                    <h4 class="mb-3">Practice Questions</h4>
+                    
+                    <div class="question mb-4">
+                        <p><strong>1.</strong> The sum of three consecutive integers is 72. What is the smallest of these integers?</p>
+                        <p class="solution collapse" id="solution1">
+                            Let x = the smallest integer
+                            Then x+1 = the next integer, and x+2 = the third integer
+                            
+                            The sum is 72, so:
+                            x + (x+1) + (x+2) = 72
+                            3x + 3 = 72
+                            3x = 69
+                            x = 23
+                            
+                            The smallest integer is 23.
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution1">Show Solution</button>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>2.</strong> Tickets for a school play cost $8 for adults and $5 for students. The total revenue from ticket sales was $2,340 and 350 tickets were sold. How many student tickets were sold?</p>
+                        <p class="solution collapse" id="solution2">
+                            Let x = number of student tickets
+                            Then 350 - x = number of adult tickets
+                            
+                            Total revenue equation:
+                            5x + 8(350 - x) = 2,340
+                            5x + 2,800 - 8x = 2,340
+                            -3x + 2,800 = 2,340
+                            -3x = -460
+                            x = 153.33...
+                            
+                            Since we can't have a fractional number of tickets, let's check if there's a mistake.
+                            If x = 153 students:
+                            5(153) + 8(350-153) = 765 + 8(197) = 765 + 1,576 = 2,341
+                            
+                            If x = 154 students:
+                            5(154) + 8(350-154) = 770 + 8(196) = 770 + 1,568 = 2,338
+                            
+                            The closest answer is 154 student tickets.
+                        </p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution2">Show Solution</button>
+                    </div>
+                </div>
+                
+                <div class="sat-tips mt-5 p-4 bg-warning bg-opacity-10 rounded">
+                    <h4 class="mb-3">SAT Tips for Word Problems</h4>
+                    <ul class="mb-0">
+                        <li>Read the problem carefully and identify the unknown quantities.</li>
+                        <li>Draw diagrams or tables to organize information when needed.</li>
+                        <li>Use clear variable assignments and be consistent with units.</li>
+                        <li>Always verify your answer in the context of the original problem.</li>
+                        <li>Check if the answer is reasonable (e.g., no negative ages, fractional people, etc.).</li>
+                    </ul>
+                </div>
+
+                <div class="next-steps text-center mt-5">
+                    <a href="{{ url_for('algebra_beginner') }}" class="btn btn-success">Complete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .example-box {
+        background-color: #f8f9fa;
+    }
+    
+    /* Ensure key concepts text color doesn't change in dark mode */
+    .alert-info {
+        color: #0c5460;
+    }
+
+    .solution {
+        background-color: #e9ecef;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        margin-bottom: 0.5rem;
+        white-space: pre-line;
+    }
+
+    .bg-primary, .bg-success, .bg-warning {
+        transition: 0.3s;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Add Font Awesome for icons
+    if (!document.getElementById('font-awesome')) {
+        var link = document.createElement('link');
+        link.id = 'font-awesome';
+        link.rel = 'stylesheet';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+        document.head.appendChild(link);
+    }
+    
+    // Bootstrap JS for collapse functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof bootstrap === 'undefined') {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+            script.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }
+    });
+</script>
+{% endblock %}

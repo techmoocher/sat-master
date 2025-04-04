@@ -1,0 +1,373 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - Intermediate Graphs & Functions{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-5"><strong>Graphs of Linear Equations and Functions</strong></h1>
+        <p class="lead">Intermediate level: Systems of equations and complex applications</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card shadow mb-4">
+            <div class="card-body p-4">
+                <h3 class="mb-4">Systems of Linear Equations</h3>
+                
+                <div class="alert alert-info">
+                    <h5>Key Concepts</h5>
+                    <ul class="mb-0">
+                        <li>Solving systems by graphing</li>
+                        <li>Solutions as points of intersection</li>
+                        <li>Special cases (parallel and coincident lines)</li>
+                        <li>Applications in real-world problems</li>
+                    </ul>
+                </div>
+
+                <h4 class="mt-5 mb-3">Graphical Solutions to Systems</h4>
+                
+                <p>When two lines intersect, their point of intersection represents the solution to the system of equations. This is because at that point, both equations are satisfied simultaneously.</p>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example 1:</strong> Solve the system graphically:</p>
+                    <p>y = 2x + 1</p>
+                    <p>y = -x + 4</p>
+                    
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="steps">
+                                <p><strong>Step 1:</strong> Graph the first line: y = 2x + 1</p>
+                                <p>This has slope m = 2 and y-intercept b = 1</p>
+                                
+                                <p><strong>Step 2:</strong> Graph the second line: y = -x + 4</p>
+                                <p>This has slope m = -1 and y-intercept b = 4</p>
+                                
+                                <p><strong>Step 3:</strong> Find the intersection point</p>
+                                <p>The lines appear to intersect at the point (1, 3)</p>
+                                
+                                <p><strong>Step 4:</strong> Verify the solution algebraically</p>
+                                <p>Substitute (1, 3) into both equations:</p>
+                                <p>Line 1: 3 = 2(1) + 1 = 3 ✓</p>
+                                <p>Line 2: 3 = -1 + 4 = 3 ✓</p>
+                                
+                                <p><strong>Therefore, the solution is (1, 3).</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <p><small>Graphical representation of system with intersection at (1, 3)</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example 2:</strong> Solve the system using the substitution method:</p>
+                    <p>2x + 3y = 12</p>
+                    <p>y = 4 - x</p>
+                    
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> We already have y isolated in the second equation</p>
+                        
+                        <p><strong>Step 2:</strong> Substitute the expression for y into the first equation</p>
+                        <p>2x + 3(4 - x) = 12</p>
+                        <p>2x + 12 - 3x = 12</p>
+                        <p>-x + 12 = 12</p>
+                        <p>-x = 0</p>
+                        <p>x = 0</p>
+                        
+                        <p><strong>Step 3:</strong> Find y by substituting x = 0 back into either equation</p>
+                        <p>y = 4 - 0 = 4</p>
+                        
+                        <p><strong>Therefore, the solution is (0, 4).</strong></p>
+                    </div>
+                </div>
+
+                <h4 class="mt-5 mb-3">Special Cases in Systems of Equations</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong>Parallel Lines: No Solution</strong></p>
+                            <p>When two lines have the same slope but different y-intercepts, they never intersect.</p>
+                            <p><strong>Example:</strong></p>
+                            <p>y = 2x + 1</p>
+                            <p>y = 2x + 4</p>
+                            <p>Both lines have slope m = 2, but different y-intercepts. This system has no solution.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Coincident Lines: Infinite Solutions</strong></p>
+                            <p>When two lines are actually the same line, every point on the line is a solution.</p>
+                            <p><strong>Example:</strong></p>
+                            <p>y = 2x + 3</p>
+                            <p>4x + 2y = 6</p>
+                            <p>The second equation can be rewritten as y = -2x + 3, which is the same as the first equation. This system has infinitely many solutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="mt-5 mb-3">Linear Inequalities</h4>
+                
+                <p>Linear inequalities represent regions of the coordinate plane instead of just a line.</p>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Graphing linear inequalities:</strong></p>
+                    <ol>
+                        <li>Graph the boundary line (solid for ≤ or ≥, dashed for < or >)</li>
+                        <li>Test a point not on the line to determine which side to shade</li>
+                        <li>Shade the region that satisfies the inequality</li>
+                    </ol>
+                    
+                    <p><strong>Example:</strong> Graph the inequality y > 2x - 1</p>
+                    
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Graph the boundary line y = 2x - 1 as a dashed line (since > doesn't include the line itself)</p>
+                        
+                        <p><strong>Step 2:</strong> Test a point not on the line, such as (0, 0)</p>
+                        <p>Substitute (0, 0) into the inequality: 0 > 2(0) - 1</p>
+                        <p>0 > -1, which is true</p>
+                        
+                        <p><strong>Step 3:</strong> Since the test point satisfies the inequality, shade the region containing (0, 0), which is above the line</p>
+                    </div>
+                </div>
+
+                <h4 class="mt-5 mb-3">Systems of Linear Inequalities</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>To graph a system of linear inequalities:</strong></p>
+                    <ol>
+                        <li>Graph each inequality separately</li>
+                        <li>Identify the region where all inequalities are satisfied (the intersection of the shaded regions)</li>
+                    </ol>
+                    
+                    <p><strong>Example:</strong> Graph the system of inequalities</p>
+                    <p>y ≤ 2x + 1</p>
+                    <p>y ≥ -x + 3</p>
+                    
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Graph y = 2x + 1 as a solid line (since ≤ includes the line)</p>
+                        <p><strong>Step 2:</strong> Shade below this line</p>
+                        <p><strong>Step 3:</strong> Graph y = -x + 3 as a solid line (since ≥ includes the line)</p>
+                        <p><strong>Step 4:</strong> Shade above this line</p>
+                        <p><strong>Step 5:</strong> The solution region is where both shadings overlap</p>
+                    </div>
+                </div>
+
+                <h4 class="mt-5 mb-3">Real-World Applications</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example 1: Break-Even Analysis</strong></p>
+                    
+                    <p>A company produces widgets with a fixed cost of $5000 and a variable cost of $8 per widget. The widgets sell for $20 each.</p>
+                    
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Define variables</p>
+                        <p>Let x = number of widgets produced and sold</p>
+                        
+                        <p><strong>Step 2:</strong> Write equations for cost and revenue</p>
+                        <p>Cost (C) = 5000 + 8x</p>
+                        <p>Revenue (R) = 20x</p>
+                        
+                        <p><strong>Step 3:</strong> Find the break-even point by setting C = R</p>
+                        <p>5000 + 8x = 20x</p>
+                        <p>5000 = 12x</p>
+                        <p>x = 417 (rounded up from 416.67)</p>
+                        
+                        <p><strong>Step 4:</strong> Interpret the result</p>
+                        <p>The company must sell 417 widgets to break even.</p>
+                    </div>
+                </div>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example 2: Motion Problems</strong></p>
+                    
+                    <p>Two cars start at the same point. Car A travels east at 60 mph, while Car B travels north at 45 mph. How far apart are they after 2 hours?</p>
+                    
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Define position functions</p>
+                        <p>Car A: x = 60t, y = 0 (where t is time in hours)</p>
+                        <p>Car B: x = 0, y = 45t</p>
+                        
+                        <p><strong>Step 2:</strong> Calculate positions at t = 2</p>
+                        <p>Car A at t = 2: (120, 0)</p>
+                        <p>Car B at t = 2: (0, 90)</p>
+                        
+                        <p><strong>Step 3:</strong> Apply the Pythagorean theorem to find the distance</p>
+                        <p>d = √(120² + 90²) = √(14400 + 8100) = √22500 = 150 miles</p>
+                    </div>
+                </div>
+
+                <div class="practice-section mt-5 p-4 bg-light rounded">
+                    <h4 class="mb-3">Practice Problems</h4>
+                    
+                    <div class="question mb-4">
+                        <p><strong>1.</strong> A theater charges $8 for adult tickets and $5 for child tickets. If 200 tickets were sold for a total of $1400, how many of each type were sold?</p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution1">Show Solution</button>
+                        <div class="collapse mt-2" id="solution1">
+                            <p>Let x = number of adult tickets</p>
+                            <p>Let y = number of child tickets</p>
+                            <p>Equations:</p>
+                            <p>x + y = 200 (total tickets)</p>
+                            <p>8x + 5y = 1400 (total revenue)</p>
+                            
+                            <p>From the first equation:</p>
+                            <p>y = 200 - x</p>
+                            
+                            <p>Substitute into the second equation:</p>
+                            <p>8x + 5(200 - x) = 1400</p>
+                            <p>8x + 1000 - 5x = 1400</p>
+                            <p>3x = 400</p>
+                            <p>x = 133</p>
+                            
+                            <p>Substitute x = 133 into the first equation:</p>
+                            <p>y = 200 - 133</p>
+                            <p>y = 67</p>
+                            
+                            <p><strong>Solution:</strong> 133 adult tickets and 67 child tickets</p>
+                        </div>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>2.</strong> A cyclist travels at 15 mph with no wind. With a tailwind, the cyclist can travel 22.5 mph, and against the same wind, the cyclist can travel 10 mph. What is the speed of the wind?</p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution2">Show Solution</button>
+                        <div class="collapse mt-2" id="solution2">
+                            <p>Let c = cyclist's speed with no wind</p>
+                            <p>Let w = wind speed</p>
+                            
+                            <p>With tailwind: c + w = 22.5</p>
+                            <p>Against the wind: c - w = 10</p>
+                            
+                            <p>Add the two equations:</p>
+                            <p>(c + w) + (c - w) = 22.5 + 10</p>
+                            <p>2c = 32.5</p>
+                            <p>c = 16.25</p>
+                            
+                            <p>Substitute c = 16.25 into the first equation:</p>
+                            <p>16.25 + w = 22.5</p>
+                            <p>w = 6.25</p>
+                            
+                            <p><strong>Solution:</strong> The wind speed is 6.25 mph.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>3.</strong> Graph the solution region for the system of inequalities:</p>
+                        <p>y ≤ 2x + 3</p>
+                        <p>y ≥ -x + 1</p>
+                        <p>x ≥ 0</p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution3">Show Solution</button>
+                        <div class="collapse mt-2" id="solution3">
+                            <p><strong>Step 1:</strong> Graph each inequality</p>
+                            <p>- y ≤ 2x + 3: Graph y = 2x + 3 as a solid line and shade below</p>
+                            <p>- y ≥ -x + 1: Graph y = -x + 1 as a solid line and shade above</p>
+                            <p>- x ≥ 0: Graph x = 0 (the y-axis) as a solid line and shade to the right</p>
+                            
+                            <p><strong>Step 2:</strong> Find the region that satisfies all three inequalities</p>
+                            <p>This creates a triangular region bounded by:</p>
+                            <p>- The y-axis (x = 0)</p>
+                            <p>- The line y = -x + 1</p>
+                            <p>- The line y = 2x + 3</p>
+                            
+                            <p><strong>Step 3:</strong> Find the vertices of this region</p>
+                            <p>At the y-axis, set x = 0 in both lines:</p>
+                            <p>For y = -x + 1: When x = 0, y = 1</p>
+                            <p>For y = 2x + 3: When x = 0, y = 3</p>
+                            <p>So two vertices are (0, 1) and (0, 3)</p>
+                            
+                            <p>For the third vertex, find the intersection of the two lines:</p>
+                            <p>-x + 1 = 2x + 3</p>
+                            <p>-3x = 2</p>
+                            <p>x = -2/3</p>
+                            
+                            <p>Since x = -2/3 is negative, it violates the constraint x ≥ 0.</p>
+                            
+                            <p><strong>Solution:</strong> The vertices of the triangular region are (0, 1), (0, 3), and the intersection of y = -x + 1 and y = 2x + 3 within the feasible region.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="next-steps text-center mt-5">
+                    <a href="{{ url_for('algebra_beginner') }}" class="btn btn-success">
+                        Complete <i class="fas fa-check ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .example-box {
+        background-color: #f8f9fa;
+    }
+    
+    body.dark-mode .example-box {
+        background-color: #2d2d2d;
+        border-color: #444 !important;
+    }
+    
+    body.dark-mode .practice-section {
+        background-color: #2d2d2d !important;
+    }
+    
+    /* Ensure key concepts text color doesn't change in dark mode */
+    .alert-info {
+        color: #0c5460;
+    }
+    
+    body.dark-mode .alert-info {
+        background-color: rgba(23, 162, 184, 0.15) !important;
+        border-color: rgba(23, 162, 184, 0.3) !important;
+        color: #0c5460 !important;
+    }
+    
+    .solution {
+        background-color: #e9ecef;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        margin-bottom: 0.5rem;
+        white-space: pre-line;
+    }
+    
+    body.dark-mode .solution {
+        background-color: #3a3a3a;
+    }
+    
+    /* Table styling */
+    .table-sm td, .table-sm th {
+        padding: 0.3rem;
+    }
+    
+    body.dark-mode .table {
+        color: #e0e0e0;
+    }
+    
+    body.dark-mode .table-bordered {
+        border-color: #444;
+    }
+    
+    body.dark-mode .table th,
+    body.dark-mode .table td {
+        border-color: #444;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Bootstrap JS for collapse functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof bootstrap === 'undefined') {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }
+    });
+</script>
+{% endblock %}

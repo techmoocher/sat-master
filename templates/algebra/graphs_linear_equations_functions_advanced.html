@@ -1,0 +1,570 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - Advanced Graphs & Functions{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-5"><strong>Graphs of Linear Equations and Functions</strong></h1>
+        <p class="lead">Advanced level: Linear programming and optimization</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card shadow mb-4">
+            <div class="card-body p-4">
+                <h3 class="mb-4">Linear Programming and Optimization</h3>
+                
+                <div class="alert alert-info">
+                    <h5>Key Concepts</h5>
+                    <ul class="mb-0">
+                        <li>Setting up optimization problems with linear constraints</li>
+                        <li>Finding feasible regions using systems of inequalities</li>
+                        <li>Identifying optimal values at vertices</li>
+                        <li>Interpreting solutions in context</li>
+                    </ul>
+                </div>
+
+                <h4 class="mt-5 mb-3">Introduction to Linear Programming</h4>
+                
+                <p>Linear programming is a powerful mathematical technique used to find the best outcome in a mathematical model whose requirements are represented by linear relationships. It's widely used in business, economics, and engineering to optimize processes and allocate resources.</p>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Components of a Linear Programming Problem:</strong></p>
+                    
+                    <ol>
+                        <li><strong>Objective Function:</strong> The quantity we want to maximize or minimize (e.g., profit, cost)</li>
+                        <li><strong>Decision Variables:</strong> The quantities we need to determine (usually represented as x, y, etc.)</li>
+                        <li><strong>Constraints:</strong> Limitations expressed as linear inequalities</li>
+                        <li><strong>Non-negativity Conditions:</strong> Decision variables are typically restricted to be non-negative</li>
+                    </ol>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Graphical Method of Linear Programming</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example 1:</strong> A company manufactures two products: A and B. Each unit of product A requires 2 hours of machine time and 1 hour of labor. Each unit of product B requires 1 hour of machine time and 3 hours of labor. The company has 40 hours of machine time and 30 hours of labor available per week. If the profit is $50 per unit for product A and $40 per unit for product B, how many units of each product should the company produce to maximize profit?</p>
+                    
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Define the decision variables</p>
+                        <p>Let x = number of units of product A produced per week</p>
+                        <p>Let y = number of units of product B produced per week</p>
+                        
+                        <p><strong>Step 2:</strong> Write the objective function</p>
+                        <p>Maximize P = 50x + 40y</p>
+                        
+                        <p><strong>Step 3:</strong> Identify the constraints</p>
+                        <p>Machine time constraint: 2x + y ≤ 40</p>
+                        <p>Labor constraint: x + 3y ≤ 30</p>
+                        <p>Non-negativity constraints: x ≥ 0, y ≥ 0</p>
+                        
+                        <p><strong>Step 4:</strong> Graph the feasible region</p>
+                        <p>The feasible region is the shaded area that satisfies all constraints:</p>
+                        <ul>
+                            <li>Draw the line 2x + y = 40</li>
+                            <li>Draw the line x + 3y = 30</li>
+                            <li>Shade the region below both lines in the first quadrant (where x ≥ 0 and y ≥ 0)</li>
+                        </ul>
+                        
+                        <p><strong>Step 5:</strong> Find the vertices of the feasible region</p>
+                        <p>The vertices are:</p>
+                        <ul>
+                            <li>Origin: (0, 0)</li>
+                            <li>x-axis intercept of machine constraint: (20, 0)</li>
+                            <li>y-axis intercept of machine constraint: (0, 40)</li>
+                            <li>x-axis intercept of labor constraint: (30, 0)</li>
+                            <li>y-axis intercept of labor constraint: (0, 10)</li>
+                            <li>Intersection of the two constraint lines:</li>
+                        </ul>
+                        
+                        <p>To find the intersection, solve the system:</p>
+                        <p>2x + y = 40</p>
+                        <p>x + 3y = 30</p>
+                        
+                        <p>From the first equation: y = 40 - 2x</p>
+                        <p>Substituting into the second equation:</p>
+                        <p>x + 3(40 - 2x) = 30</p>
+                        <p>x + 120 - 6x = 30</p>
+                        <p>-5x = -90</p>
+                        <p>x = 18</p>
+                        
+                        <p>Substituting back: y = 40 - 2(18) = 40 - 36 = 4</p>
+                        
+                        <p>So the vertices of the feasible region are (0, 0), (20, 0), (18, 4), and (0, 10)</p>
+                        
+                        <p><strong>Step 6:</strong> Evaluate the objective function at each vertex</p>
+                        <p>P(0, 0) = 50(0) + 40(0) = 0</p>
+                        <p>P(20, 0) = 50(20) + 40(0) = 1000</p>
+                        <p>P(18, 4) = 50(18) + 40(4) = 900 + 160 = 1060</p>
+                        <p>P(0, 10) = 50(0) + 40(10) = 400</p>
+                        
+                        <p><strong>Step 7:</strong> Identify the optimal solution</p>
+                        <p>The maximum profit is $1060, achieved by producing 18 units of product A and 4 units of product B per week.</p>
+                    </div>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Corner Point Principle</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p>A fundamental principle in linear programming is that if an optimal solution exists, it will occur at a corner point (vertex) of the feasible region. This is because a linear function increases or decreases most rapidly along the edges of the feasible region.</p>
+                    
+                    <p><strong>Why this works:</strong> The objective function represents a family of parallel lines (in 2D) or planes (in higher dimensions). As we move these lines/planes in the direction of increasing the objective value, the last point of contact with the feasible region will be a vertex.</p>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Special Cases in Linear Programming</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong>1. Multiple Optimal Solutions</strong></p>
+                            <p>When the objective function line is parallel to one of the constraint boundaries, there might be infinitely many optimal solutions along that boundary.</p>
+                            <p><strong>Example:</strong></p>
+                            <p>Maximize P = x + y</p>
+                            <p>Subject to:</p>
+                            <p>x + y ≤ 8</p>
+                            <p>x ≥ 0, y ≥ 0</p>
+                            <p>Here, any point on the line segment from (8, 0) to (0, 8) gives the same optimal value P = 8.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>2. Unbounded Solution</strong></p>
+                            <p>If the feasible region extends infinitely in the direction of increasing objective function, there is no maximum value.</p>
+                            <p><strong>Example:</strong></p>
+                            <p>Maximize P = x + y</p>
+                            <p>Subject to:</p>
+                            <p>x - y ≤ 4</p>
+                            <p>x ≥ 0, y ≥ 0</p>
+                            <p>No matter how large P becomes, we can always find points in the feasible region with even larger values.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <p><strong>3. Infeasible Solution</strong></p>
+                            <p>When there are no points that satisfy all constraints simultaneously, there is no feasible solution.</p>
+                            <p><strong>Example:</strong></p>
+                            <p>Subject to:</p>
+                            <p>x + y ≤ 5</p>
+                            <p>x + y ≥ 10</p>
+                            <p>x ≥ 0, y ≥ 0</p>
+                            <p>These constraints are contradictory, so no solution exists.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>4. Degenerate Solution</strong></p>
+                            <p>Occurs when more than two constraints intersect at a vertex, potentially causing computational complications in algorithms.</p>
+                            <p>On the SAT, you'll primarily be concerned with cases 1-3 rather than degenerate solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4 class="mt-5 mb-3">Advanced Applications</h4>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example 2: Resource Allocation Problem</strong></p>
+                    
+                    <p>A factory produces two types of bicycles: mountain bikes and road bikes. Each mountain bike requires 3 hours of assembly and 2 hours of painting. Each road bike requires 2 hours of assembly and 1 hour of painting. The factory has 60 hours of assembly time and 40 hours of painting time available per week. Market research indicates that at most 15 mountain bikes and at most 20 road bikes can be sold per week. If the profit is $80 per mountain bike and $60 per road bike, how many of each should be produced to maximize profit?</p>
+                    
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Define the decision variables</p>
+                        <p>Let x = number of mountain bikes produced per week</p>
+                        <p>Let y = number of road bikes produced per week</p>
+                        
+                        <p><strong>Step 2:</strong> Write the objective function</p>
+                        <p>Maximize P = 80x + 60y</p>
+                        
+                        <p><strong>Step 3:</strong> Identify the constraints</p>
+                        <p>Assembly time: 3x + 2y ≤ 60</p>
+                        <p>Painting time: 2x + y ≤ 40</p>
+                        <p>Market constraints: x ≤ 15, y ≤ 20</p>
+                        <p>Non-negativity: x ≥ 0, y ≥ 0</p>
+                        
+                        <p><strong>Step 4:</strong> Graph the feasible region</p>
+                        <p>The feasible region is bounded by all five constraints.</p>
+                        
+                        <p><strong>Step 5:</strong> Find the vertices of the feasible region</p>
+                        <p>The potential vertices include:</p>
+                        <ul>
+                            <li>(0, 0): Origin</li>
+                            <li>(0, 20): Maximum road bikes, no mountain bikes</li>
+                            <li>(15, 0): Maximum mountain bikes, no road bikes</li>
+                            <li>Intersection of x = 15 and y = 20: (15, 20)</li>
+                            <li>Intersection of assembly constraint and y = 20: Solving 3x + 2(20) ≤ 60, we get 3x + 40 ≤ 60, so x ≤ 6.67. This gives (6.67, 20)</li>
+                            <li>Intersection of painting constraint and y = 20: Solving 2x + 20 ≤ 40, we get x ≤ 10. This gives (10, 20)</li>
+                            <li>Intersection of x = 15 and assembly constraint: Solving 3(15) + 2y ≤ 60, we get 45 + 2y ≤ 60, so y ≤ 7.5. This gives (15, 7.5)</li>
+                            <li>Intersection of x = 15 and painting constraint: Solving 2(15) + y ≤ 40, we get 30 + y ≤ 40, so y ≤ 10. This gives (15, 10)</li>
+                            <li>Intersection of assembly and painting constraints: From assembly, y = (60 - 3x)/2. From painting, y = 40 - 2x. Setting these equal: (60 - 3x)/2 = 40 - 2x, which gives x = 8, y = 24. But since y > 20, this point is outside our feasible region.</li>
+                        </ul>
+                        
+                        <p>The feasible vertices are (0, 0), (0, 20), (10, 20), (15, 10), (15, 7.5), (15, 0).</p>
+                        
+                        <p><strong>Step 6:</strong> Evaluate the objective function at each vertex</p>
+                        <p>P(0, 0) = 0</p>
+                        <p>P(0, 20) = 60(20) = 1200</p>
+                        <p>P(10, 20) = 80(10) + 60(20) = 800 + 1200 = 2000</p>
+                        <p>P(15, 10) = 80(15) + 60(10) = 1200 + 600 = 1800</p>
+                        <p>P(15, 7.5) = 80(15) + 60(7.5) = 1200 + 450 = 1650</p>
+                        <p>P(15, 0) = 80(15) = 1200</p>
+                        
+                        <p><strong>Step 7:</strong> Identify the optimal solution</p>
+                        <p>The maximum profit is $2000, achieved by producing 10 mountain bikes and 20 road bikes per week.</p>
+                    </div>
+                </div>
+                
+                <div class="example-box p-3 mb-4 border rounded">
+                    <p><strong>Example 3: Diet Problem</strong></p>
+                    
+                    <p>A nutritionist is planning a diet using two types of food. Food A contains 2 units of protein, 1 unit of calcium, and 3 units of iron per serving. Food B contains 1 unit of protein, 2 units of calcium, and 1 unit of iron per serving. The diet must include at least 10 units of protein, 7 units of calcium, and 12 units of iron. If Food A costs $2 per serving and Food B costs $3 per serving, how many servings of each food should be included to minimize cost?</p>
+                    
+                    <div class="steps">
+                        <p><strong>Step 1:</strong> Define the decision variables</p>
+                        <p>Let x = number of servings of Food A</p>
+                        <p>Let y = number of servings of Food B</p>
+                        
+                        <p><strong>Step 2:</strong> Write the objective function (to minimize)</p>
+                        <p>Minimize C = 2x + 3y</p>
+                        
+                        <p><strong>Step 3:</strong> Identify the constraints</p>
+                        <p>Protein: 2x + y ≥ 10</p>
+                        <p>Calcium: x + 2y ≥ 7</p>
+                        <p>Iron: 3x + y ≥ 12</p>
+                        <p>Non-negativity: x ≥ 0, y ≥ 0</p>
+                        
+                        <p><strong>Step 4:</strong> Find the vertices of the feasible region</p>
+                        <p>We need to find the intersection points of:</p>
+                        <ul>
+                            <li>Protein and Calcium: 2x + y = 10 and x + 2y = 7</li>
+                            <li>Protein and Iron: 2x + y = 10 and 3x + y = 12</li>
+                            <li>Calcium and Iron: x + 2y = 7 and 3x + y = 12</li>
+                        </ul>
+                        
+                        <p>For Protein and Calcium:</p>
+                        <p>From Protein: y = 10 - 2x</p>
+                        <p>Substituting into Calcium: x + 2(10 - 2x) = 7</p>
+                        <p>x + 20 - 4x = 7</p>
+                        <p>-3x = -13</p>
+                        <p>x = 13/3 ≈ 4.33</p>
+                        <p>y = 10 - 2(13/3) = 10 - 26/3 = 30/3 - 26/3 = 4/3 ≈ 1.33</p>
+                        
+                        <p>For Protein and Iron:</p>
+                        <p>2x + y = 10</p>
+                        <p>3x + y = 12</p>
+                        <p>Subtracting: -x = -2</p>
+                        <p>x = 2</p>
+                        <p>y = 10 - 2(2) = 6</p>
+                        
+                        <p>For Calcium and Iron:</p>
+                        <p>x + 2y = 7</p>
+                        <p>3x + y = 12</p>
+                        <p>Multiply first equation by 3: 3x + 6y = 21</p>
+                        <p>Subtract second: 5y = 9</p>
+                        <p>y = 9/5 = 1.8</p>
+                        <p>x = 7 - 2(9/5) = 7 - 18/5 = 35/5 - 18/5 = 17/5 = 3.4</p>
+                        
+                        <p>So the vertices are approximately: (4.33, 1.33), (2, 6), and (3.4, 1.8)</p>
+                        
+                        <p><strong>Step 5:</strong> Evaluate the objective function at each vertex</p>
+                        <p>C(4.33, 1.33) = 2(4.33) + 3(1.33) = 8.66 + 3.99 = 12.65</p>
+                        <p>C(2, 6) = 2(2) + 3(6) = 4 + 18 = 22</p>
+                        <p>C(3.4, 1.8) = 2(3.4) + 3(1.8) = 6.8 + 5.4 = 12.2</p>
+                        
+                        <p><strong>Step 6:</strong> Identify the optimal solution</p>
+                        <p>The minimum cost is $12.20, achieved by including 3.4 servings of Food A and 1.8 servings of Food B.</p>
+                        
+                        <p>Since it's impractical to serve partial servings, we would round to 3 servings of Food A and 2 servings of Food B, with a cost of $12.</p>
+                    </div>
+                </div>
+                
+                <div class="practice-section mt-5 p-4 bg-light rounded">
+                    <h4 class="mb-3">Advanced Practice Problems</h4>
+                    
+                    <div class="question mb-4">
+                        <p><strong>1.</strong> A company manufactures two types of products: standard and deluxe. Each standard product requires 3 hours of labor and 4 hours of machine time. Each deluxe product requires 5 hours of labor and 3 hours of machine time. The company has 60 hours of labor and 48 hours of machine time available per day. The profit is $10 per standard product and $15 per deluxe product. How many of each type should be produced to maximize profit?</p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution1">Show Solution</button>
+                        <div class="collapse mt-2" id="solution1">
+                            <p><strong>Step 1:</strong> Define variables</p>
+                            <p>Let x = number of standard products</p>
+                            <p>Let y = number of deluxe products</p>
+                            
+                            <p><strong>Step 2:</strong> Write the objective function</p>
+                            <p>Maximize P = 10x + 15y</p>
+                            
+                            <p><strong>Step 3:</strong> Identify constraints</p>
+                            <p>Labor: 3x + 5y ≤ 60</p>
+                            <p>Machine: 4x + 3y ≤ 48</p>
+                            <p>Non-negativity: x ≥ 0, y ≥ 0</p>
+                            
+                            <p><strong>Step 4:</strong> Find vertices</p>
+                            <p>(0, 0), (0, 12), (12, 0)</p>
+                            
+                            <p>Find the intersection of constraints:</p>
+                            <p>3x + 5y = 60</p>
+                            <p>4x + 3y = 48</p>
+                            
+                            <p>Multiply the first by 4: 12x + 20y = 240</p>
+                            <p>Multiply the second by 3: 12x + 9y = 144</p>
+                            <p>Subtract: 11y = 96</p>
+                            <p>y = 8.73</p>
+                            
+                            <p>Substitute into first: 3x + 5(8.73) = 60</p>
+                            <p>3x + 43.65 = 60</p>
+                            <p>3x = 16.35</p>
+                            <p>x = 5.45</p>
+                            
+                            <p><strong>Step 5:</strong> Evaluate objective function</p>
+                            <p>P(0, 0) = 0</p>
+                            <p>P(0, 12) = 15(12) = 180</p>
+                            <p>P(12, 0) = 10(12) = 120</p>
+                            <p>P(5.45, 8.73) = 10(5.45) + 15(8.73) = 54.5 + 130.95 = 185.45</p>
+                            
+                            <p><strong>Step 6:</strong> Identify optimal solution</p>
+                            <p>The maximum profit is $185.45, achieved by producing 5 standard products and 9 deluxe products (rounding to nearest whole units).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>2.</strong> A furniture maker is crafting tables and chairs. Each table requires 9 hours of woodworking and 2 hours of finishing. Each chair requires 5 hours of woodworking and 1 hour of finishing. The workshop has 90 hours of woodworking time and 16 hours of finishing time available per week. Due to space limitations, at most 12 tables can be made per week. If each table sells for $120 and each chair for $75, how many of each should be made to maximize revenue?</p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution2">Show Solution</button>
+                        <div class="collapse mt-2" id="solution2">
+                            <p><strong>Step 1:</strong> Define variables</p>
+                            <p>Let x = number of tables</p>
+                            <p>Let y = number of chairs</p>
+                            
+                            <p><strong>Step 2:</strong> Write the objective function</p>
+                            <p>Maximize R = 120x + 75y</p>
+                            
+                            <p><strong>Step 3:</strong> Identify constraints</p>
+                            <p>Woodworking: 9x + 5y ≤ 90</p>
+                            <p>Finishing: 2x + y ≤ 16</p>
+                            <p>Space: x ≤ 12</p>
+                            <p>Non-negativity: x ≥ 0, y ≥ 0</p>
+                            
+                            <p><strong>Step 4:</strong> Find vertices</p>
+                            <p>The vertices include (0, 0), (10, 0), (0, 18), (0, 16)</p>
+                            
+                            <p>Find intersections:</p>
+                            <p>- Woodworking and Finishing:</p>
+                            <p>From finishing: y = 16 - 2x</p>
+                            <p>Substitute into woodworking: 9x + 5(16 - 2x) = 90</p>
+                            <p>9x + 80 - 10x = 90</p>
+                            <p>-x = 10</p>
+                            <p>x = 10</p>
+                            <p>y = 16 - 2(10) = -4</p>
+                            <p>Since y < 0, this point is outside our feasible region.</p>
+                            
+                            <p>- Space and Woodworking:</p>
+                            <p>When x = 12, from woodworking: 9(12) + 5y ≤ 90</p>
+                            <p>108 + 5y ≤ 90</p>
+                            <p>5y ≤ -18</p>
+                            <p>y ≤ -3.6</p>
+                            <p>Since y < 0, this violates non-negativity.</p>
+                            
+                            <p>- Space and Finishing:</p>
+                            <p>When x = 12, from finishing: 2(12) + y ≤ 16</p>
+                            <p>24 + y ≤ 16</p>
+                            <p>y ≤ -8</p>
+                            <p>This violates non-negativity.</p>
+                            
+                            <p>So the feasible region is bounded by x = 0, y = 0, woodworking, and finishing constraints.</p>
+                            
+                            <p>The proper intersection of woodworking and finishing is:</p>
+                            <p>9x + 5y = 90</p>
+                            <p>2x + y = 16</p>
+                            
+                            <p>From second equation: y = 16 - 2x</p>
+                            <p>Substitute: 9x + 5(16 - 2x) = 90</p>
+                            <p>9x + 80 - 10x = 90</p>
+                            <p>-x = 10</p>
+                            <p>This gives x = -10, which violates non-negativity.</p>
+                            
+                            <p>Let's try a different approach. From finishing: y = 16 - 2x</p>
+                            <p>Looking at points along this line:</p>
+                            <p>When x = 0, y = 16</p>
+                            <p>When x = 8, y = 0</p>
+                            
+                            <p>Let's check if these satisfy woodworking:</p>
+                            <p>At (0, 16): 9(0) + 5(16) = 80 ≤ 90 ✓</p>
+                            <p>At (8, 0): 9(8) + 5(0) = 72 ≤ 90 ✓</p>
+                            
+                            <p>So the vertices are (0, 0), (8, 0), (0, 16), and perhaps a point where the woodworking constraint intersects either axis.</p>
+                            
+                            <p>For woodworking at y = 0: 9x = 90, so x = 10</p>
+                            <p>For woodworking at x = 0: 5y = 90, so y = 18</p>
+                            
+                            <p>So the vertices are (0, 0), (10, 0), (8, 0), (0, 18), and (0, 16)</p>
+                            
+                            <p><strong>Step 5:</strong> Evaluate objective function</p>
+                            <p>R(0, 0) = 0</p>
+                            <p>R(10, 0) = 120(10) = 1200</p>
+                            <p>R(8, 0) = 120(8) = 960</p>
+                            <p>R(0, 18) = 75(18) = 1350</p>
+                            <p>R(0, 16) = 75(16) = 1200</p>
+                            
+                            <p><strong>Step 6:</strong> Identify optimal solution</p>
+                            <p>The maximum revenue is $1350, achieved by making 0 tables and 18 chairs per week.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="question mb-4">
+                        <p><strong>3.</strong> A shipping company needs to transport goods using two types of containers: standard and refrigerated. Each standard container requires 6 square meters of deck space and can hold 10 tons of cargo. Each refrigerated container requires 8 square meters of deck space and can hold 8 tons of cargo. The ship has 120 square meters of deck space and must transport at least 140 tons of cargo. If a standard container costs $800 to ship and a refrigerated container costs $1000, what is the minimum shipping cost?</p>
+                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#solution3">Show Solution</button>
+                        <div class="collapse mt-2" id="solution3">
+                            <p><strong>Step 1:</strong> Define variables</p>
+                            <p>Let x = number of standard containers</p>
+                            <p>Let y = number of refrigerated containers</p>
+                            
+                            <p><strong>Step 2:</strong> Write the objective function</p>
+                            <p>Minimize C = 800x + 1000y</p>
+                            
+                            <p><strong>Step 3:</strong> Identify constraints</p>
+                            <p>Deck space: 6x + 8y ≤ 120</p>
+                            <p>Cargo: 10x + 8y ≥ 140</p>
+                            <p>Non-negativity: x ≥ 0, y ≥ 0</p>
+                            
+                            <p><strong>Step 4:</strong> Find vertices</p>
+                            <p>Find the intersection of the two main constraints:</p>
+                            <p>6x + 8y = 120 (deck space)</p>
+                            <p>10x + 8y = 140 (cargo)</p>
+                            
+                            <p>Subtract the first from the second:</p>
+                            <p>4x = 20</p>
+                            <p>x = 5</p>
+                            
+                            <p>Substitute back: 6(5) + 8y = 120</p>
+                            <p>30 + 8y = 120</p>
+                            <p>8y = 90</p>
+                            <p>y = 11.25</p>
+                            
+                            <p>So one vertex is (5, 11.25)</p>
+                            
+                            <p>For deck space at y = 0: 6x = 120, so x = 20</p>
+                            <p>For cargo at y = 0: 10x = 140, so x = 14</p>
+                            <p>For deck space at x = 0: 8y = 120, so y = 15</p>
+                            <p>For cargo at x = 0: 8y = 140, so y = 17.5</p>
+                            
+                            <p>Check if (20, 0) satisfies cargo constraint:</p>
+                            <p>10(20) + 8(0) = 200 ≥ 140 ✓</p>
+                            
+                            <p>Check if (0, 17.5) satisfies deck space constraint:</p>
+                            <p>6(0) + 8(17.5) = 140 > 120 ✗</p>
+                            
+                            <p>So the vertices are (5, 11.25), (14, 0), and (20, 0).</p>
+                            
+                            <p><strong>Step 5:</strong> Evaluate objective function</p>
+                            <p>C(5, 11.25) = 800(5) + 1000(11.25) = 4000 + 11250 = 15250</p>
+                            <p>C(14, 0) = 800(14) = 11200</p>
+                            <p>C(20, 0) = 800(20) = 16000</p>
+                            
+                            <p><strong>Step 6:</strong> Identify optimal solution</p>
+                            <p>The minimum cost is $11,200, achieved by shipping 14 standard containers and 0 refrigerated containers.</p>
+                            
+                            <p><strong>Note:</strong> Since containers come in whole units, we would use 14 standard containers.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sat-tips mt-5 p-4 bg-warning bg-opacity-10 rounded">
+                    <h4 class="mb-3">SAT Advanced Tips for Linear Programming</h4>
+                    <ul class="mb-0">
+                        <li>Always double-check your constraints to ensure they accurately represent the problem conditions.</li>
+                        <li>When finding vertices, systematically check the intersections of each pair of constraints.</li>
+                        <li>For minimization problems, the objective function should point in the direction of decreasing values.</li>
+                        <li>Remember that real-world problems usually require non-negative solutions, and often whole-number (integer) solutions.</li>
+                        <li>On the SAT, be prepared to interpret the meaning of your solution in context of the original problem.</li>
+                        <li>If your solution involves fractions or decimals in a context where whole numbers are needed, consider rounding appropriately and verifying that the constraints are still satisfied.</li>
+                    </ul>
+                </div>
+
+                <div class="next-steps text-center mt-5">
+                    <a href="{{ url_for('algebra_advanced_relationship_problems') }}" class="btn btn-outline-secondary me-2">
+                        <i class="fas fa-arrow-left me-1"></i> Previous Topic
+                    </a>
+                    <a href="{{ url_for('algebra_beginner') }}" class="btn btn-success">
+                        Complete <i class="fas fa-check ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .example-box {
+        background-color: #f8f9fa;
+    }
+    
+    body.dark-mode .example-box {
+        background-color: #2d2d2d;
+        border-color: #444 !important;
+    }
+    
+    body.dark-mode .practice-section {
+        background-color: #2d2d2d !important;
+    }
+    
+    body.dark-mode .sat-tips {
+        background-color: rgba(255, 193, 7, 0.05) !important;
+    }
+    
+    /* Ensure key concepts text color doesn't change in dark mode */
+    .alert-info {
+        color: #0c5460;
+    }
+    
+    body.dark-mode .alert-info {
+        background-color: rgba(23, 162, 184, 0.15) !important;
+        border-color: rgba(23, 162, 184, 0.3) !important;
+        color: #0c5460 !important;
+    }
+    
+    .solution {
+        background-color: #e9ecef;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        margin-bottom: 0.5rem;
+        white-space: pre-line;
+    }
+    
+    body.dark-mode .solution {
+        background-color: #3a3a3a;
+    }
+    
+    /* Table styling */
+    .table-sm td, .table-sm th {
+        padding: 0.3rem;
+    }
+    
+    body.dark-mode .table {
+        color: #e0e0e0;
+    }
+    
+    body.dark-mode .table-bordered {
+        border-color: #444;
+    }
+    
+    body.dark-mode .table th,
+    body.dark-mode .table td {
+        border-color: #444;
+    }
+    
+    /* Image handling in dark mode */
+    body.dark-mode img {
+        filter: brightness(0.8) contrast(1.2);
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Bootstrap JS for collapse functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof bootstrap === 'undefined') {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }
+    });
+</script>
+{% endblock %}
