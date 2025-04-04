@@ -1,0 +1,390 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - Math{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-4"><strong>SAT Math</strong></h1>
+        <p class="lead">Master the concepts and strategies needed to excel in the SAT Math section</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-8 offset-lg-2 text-center">
+        <a href="{{ url_for('what_to_expect_on_sat_math') }}" class="btn btn-lg btn-primary mb-4">What to Expect on the Math section</a>
+        <br>
+        <a href="{{ url_for('tips_and_hacks') }}#math-hacks" class="btn btn-lg btn-success mb-4">Math Tips & Hacks</a>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-12">
+        <h3 class="text-center mb-4">Study by Topic</h3>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Algebra Card -->
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 border-0 shadow">
+            <div class="card-body p-4 text-center">
+                <div class="icon-circle bg-primary mb-3">
+                    <i class="fas fa-square-root-alt"></i>
+                </div>
+                <h4 class="card-title mb-3">Algebra</h4>
+                <div class="text-start">
+                    <p class="card-text mb-3">Master essential algebraic concepts that represent about 35% of the SAT Math section:</p>
+                    <ul class="list-tight mb-3">
+                        <li>Linear equations and inequalities</li>
+                        <li>Quadratic and exponential functions</li>
+                        <li>Systems of equations and their applications</li>
+                        <li>Interpreting algebraic expressions in context</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <a href="{{ url_for('algebra_beginner') }}" class="btn btn-primary btn-lg">Start Now!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Problem Solving and Data Analytics Card -->
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 border-0 shadow">
+            <div class="card-body p-4 text-center">
+                <div class="icon-circle bg-success mb-3">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h4 class="card-title mb-3">Problem Solving & Data Analysis</h4>
+                <div class="text-start">
+                    <p class="card-text mb-3">Develop skills in data interpretation and statistical reasoning that make up about 25% of the test:</p>
+                    <ul class="list-tight mb-3">
+                        <li>Ratios, rates, proportions, and percentages</li>
+                        <li>Analyzing and interpreting data in tables and graphs</li>
+                        <li>Probability concepts and calculations</li>
+                        <li>Statistical measures (mean, median, mode, range)</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <a href="#" class="btn btn-success btn-lg">Start Now!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Trigonometry & Geometry Card -->
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 border-0 shadow">
+            <div class="card-body p-4 text-center">
+                <div class="icon-circle bg-warning mb-3">
+                    <svg class="geometry-icon" width="35px" height="35px" viewBox="0 0 460.27 460.27" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <g>
+                            <path fill="white" d="M198.606,103.653c5.272-0.328,9.38-4.699,9.38-9.981V55.135c0-5.523-4.477-10-10-10H10c-5.523,0-10,4.477-10,10v187.986 c0,5.523,4.477,10,10,10h38.538c5.282,0,9.653-4.107,9.981-9.379C63.188,168.547,123.412,108.322,198.606,103.653z"/>
+                            <path fill="white" d="M320.73,185.276c-11.33-17.662-27.083-32.352-45.557-42.48c-18.529-10.159-39.436-15.529-60.46-15.529 c-69.397,0-125.855,56.458-125.855,125.854c0,32.148,11.902,62.658,33.513,85.904c21.545,23.176,50.94,37.237,82.772,39.595 c0.248,0.019,0.495,0.026,0.741,0.026c3.498,0,6.766-1.834,8.58-4.868l106.432-177.972 C322.844,192.551,322.781,188.471,320.73,185.276z"/>
+                            <path fill="white" d="M458.852,400.003L353.625,224.045c-1.807-3.019-5.064-4.868-8.583-4.868s-6.777,1.848-8.583,4.868L231.232,400.003 c-1.848,3.089-1.892,6.934-0.116,10.064c1.776,3.133,5.098,5.067,8.699,5.067H450.27c3.601,0,6.922-1.935,8.698-5.067 C460.744,406.937,460.7,403.093,458.852,400.003z"/>
+                        </g>
+                    </svg>
+                </div>
+                <h4 class="card-title mb-3">Trigonometry & Geometry</h4>
+                <div class="text-start">
+                    <p class="card-text mb-3">Understand spatial concepts and measurements encompassing approximately 20% of SAT math questions:</p>
+                    <ul class="list-tight mb-3">
+                        <li>Angles, lines, triangles, circles, and polygons</li>
+                        <li>Trigonometric functions and their applications</li>
+                        <li>Area, volume, and coordinate geometry</li>
+                        <li>Properties of triangles and the unit circle</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <a href="#" class="btn btn-warning btn-lg">Start Now!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Advanced Math Card -->
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 border-0 shadow">
+            <div class="card-body p-4 text-center">
+                <div class="icon-circle bg-danger mb-3">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h4 class="card-title mb-3">Advanced Math</h4>
+                <div class="text-start">
+                    <p class="card-text mb-3">Master complex mathematical concepts that account for about 20% of the SAT Math questions:</p>
+                    <ul class="list-tight mb-3">
+                        <li>Manipulating complex polynomial expressions</li>
+                        <li>Function notation and interpretation</li>
+                        <li>Nonlinear systems and complex equations</li>
+                        <li>Advanced word problems and modeling situations</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <a href="#" class="btn btn-danger btn-lg">Start Now!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Topic List with Levels Section -->
+<div class="row my-5">
+    <div class="col-lg-10 offset-lg-1">
+        <div class="card shadow">
+            <div class="card-body">
+                <h3 class="text-center mb-4">SAT Math Topic Breakdown</h3>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="topic-section mb-4">
+                            <h4 class="topic-title"><i class="fas fa-square-root-alt text-primary me-2"></i>Algebra</h4>
+                            <ul class="topic-list">
+                                <li><a href="{{ url_for('algebra_beginner') }}">Beginner: Basic equations and functions</a></li>
+                                <li><a href="#">Intermediate: Systems and quadratics</a></li>
+                                <li><a href="#">Advanced: Complex equations and modeling</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="topic-section mb-4">
+                            <h4 class="topic-title"><i class="fas fa-chart-pie text-success me-2"></i>Problem Solving & Data Analysis</h4>
+                            <ul class="topic-list">
+                                <li><a href="#">Beginner: Ratios, rates, and percentages</a></li>
+                                <li><a href="#">Intermediate: Statistical measures and probability</a></li>
+                                <li><a href="#">Advanced: Complex data interpretation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="topic-section mb-4">
+                            <h4 class="topic-title"><i class="fas fa-shapes text-warning me-2"></i>Trigonometry & Geometry</h4>
+                            <ul class="topic-list">
+                                <li><a href="#">Beginner: Fundamentals of shapes and angles</a></li>
+                                <li><a href="#">Intermediate: Area, volume, and trigonometric functions</a></li>
+                                <li><a href="#">Advanced: Complex geometric problems</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="topic-section mb-4">
+                            <h4 class="topic-title"><i class="fas fa-brain text-danger me-2"></i>Advanced Math</h4>
+                            <ul class="topic-list">
+                                <li><a href="#">Beginner: Introduction to complex expressions</a></li>
+                                <li><a href="#">Intermediate: Function analysis and manipulation</a></li>
+                                <li><a href="#">Advanced: Non-linear systems and mathematical modeling</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-lg-8 offset-lg-2 text-center">
+        <div class="p-5 bg-light rounded">
+            <h2 class="mb-4">Don't know where to start?</h2>
+            <p class="lead mb-4">Start exploring our SAT Prep Roadmap to guide your studies.</p>
+            <a href="{{ url_for('sat_prep_roadmap') }}" class="btn btn-lg btn-success">View Math Prep Roadmap</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    /* Icon circles */
+    .icon-circle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        font-size: 1.75rem;
+        color: white;
+        margin-top: -10px;
+    }
+    
+    /* Base icon colors */
+    .bg-primary {
+        background-color: #0d6efd;
+    }
+    
+    .bg-success {
+        background-color: #198754;
+    }
+    
+    .bg-warning {
+        background-color: #ffc107;
+    }
+    
+    .bg-danger {
+        background-color: #dc3545;
+    }
+    
+    .bg-info {
+        background-color: #0dcaf0;
+    }
+    
+    /* Dark mode adjustments */
+    body.dark-mode .icon-circle.bg-warning {
+        color: #212529;
+    }
+    
+    .table th, .table td {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    body.dark-mode .bg-light {
+        background-color: #2d2d2d !important;
+    }
+    
+    body.dark-mode .table-light {
+        background-color: #3a3a3a;
+        color: #ffffff;
+    }
+    
+    body.dark-mode .table {
+        color: #e0e0e0;
+    }
+    
+    body.dark-mode .table-hover tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.075);
+    }
+    
+    /* Remove spacing between paragraphs and lists */
+    .card-text.mb-2 {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .list-tight {
+        padding-left: 1.25rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .list-tight li {
+        margin-bottom: 0.25rem;
+        line-height: 1.4;
+    }
+    
+    .list-tight li:last-child {
+        margin-bottom: 0;
+    }
+    
+    .btn {
+        padding: 0.375rem 0.75rem;
+        border-radius: 0.375rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    /* Make warning buttons more readable in both modes */
+    .btn-warning {
+        color: #212529;
+    }
+    
+    /* Add subtle hover effect for filled buttons */
+    .btn-primary:hover, .btn-success:hover, .btn-warning:hover, .btn-danger:hover, .btn-info:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: all 0.2s ease;
+    }
+    
+    /* Custom SVG icon styling */
+    .geometry-icon {
+        width: 40px;
+        height: 40px;
+        transform: scaleX(-1); /* Flip horizontally */
+    }
+    
+    /* Ensure the icon is properly visible in dark mode */
+    body.dark-mode .geometry-icon path {
+        fill: white;
+    }
+    
+    /* Topic List Styling */
+    .topic-title {
+        font-weight: 600;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .topic-list {
+        list-style-type: none;
+        padding-left: 1.5rem;
+    }
+    
+    .topic-list li {
+        margin-bottom: 0.5rem;
+        position: relative;
+    }
+    
+    .topic-list li:before {
+        content: "•";
+        position: absolute;
+        left: -1rem;
+        color: #6c757d;
+    }
+    
+    .topic-list a {
+        color: #0d6efd;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+    
+    .topic-list a:hover {
+        text-decoration: underline;
+        color: #0a58ca;
+    }
+    
+    body.dark-mode .topic-title {
+        border-bottom-color: #444;
+    }
+    
+    body.dark-mode .topic-list a {
+        color: #8bb9fe;
+    }
+    
+    body.dark-mode .topic-list a:hover {
+        color: #aecbfe;
+    }
+    
+    body.dark-mode .topic-list li:before {
+        color: #adb5bd;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Add Font Awesome for icons
+    if (!document.getElementById('font-awesome')) {
+        var link = document.createElement('link');
+        link.id = 'font-awesome';
+        link.rel = 'stylesheet';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+        document.head.appendChild(link);
+    }
+</script>
+{% endblock %}

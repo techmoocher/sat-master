@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - What to Expect on SAT Math{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-4">What to Expect on the SAT Math Section</h1>
+        <p class="lead">Understand the key areas tested on the SAT Math section</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-10 offset-lg-1">
+        <h2 class="text-center mb-4">The SAT Math section tests your knowledge and skills in four key areas:</h2>
+        
+        <div class="row mt-4 equal-height-cards">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm math-content-box">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title text-primary fw-bold">Heart of Algebra</h4>
+                        <div class="content-divider mb-3"></div>
+                        <p class="card-text flex-grow-1">Linear equations, systems of equations, and linear inequalities. These questions test your ability to analyze, fluently solve, and create linear equations and inequalities.</p>
+                        <ul class="list-tight mt-2 mb-0">
+                            <li>Solving linear equations and inequalities</li>
+                            <li>Interpreting linear functions</li>
+                            <li>Systems of linear equations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm math-content-box">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title text-primary fw-bold">Problem-Solving & Data Analysis</h4>
+                        <div class="content-divider mb-3"></div>
+                        <p class="card-text flex-grow-1">Quantitative reasoning with ratios, percentages, and proportional reasoning. These questions test your ability to use ratios, proportions, percentages, and units to solve problems.</p>
+                        <ul class="list-tight mt-2 mb-0">
+                            <li>Percentages and ratios</li>
+                            <li>Statistical analysis</li>
+                            <li>Interpreting data from tables and graphs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm math-content-box">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title text-primary fw-bold">Advanced Math</h4>
+                        <div class="content-divider mb-3"></div>
+                        <p class="card-text flex-grow-1">Manipulation of expressions and nonlinear equations. These questions test your ability to create, manipulate, and solve quadratic and higher-order equations.</p>
+                        <ul class="list-tight mt-2 mb-0">
+                            <li>Quadratic equations and functions</li>
+                            <li>Polynomial manipulation</li>
+                            <li>Exponential functions and growth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm math-content-box">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title text-primary fw-bold">Geometry & Trigonometry</h4>
+                        <div class="content-divider mb-3"></div>
+                        <p class="card-text flex-grow-1">Problems involving area, volume, line, angle, and triangle relationships, as well as trigonometric functions. These questions test your understanding of shapes and angles.</p>
+                        <ul class="list-tight mt-2 mb-0">
+                            <li>Area and volume calculations</li>
+                            <li>Coordinate geometry</li>
+                            <li>Right triangle trigonometry</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 offset-lg-2 text-center mb-5">
+        <a href="{{ url_for('math') }}" class="btn btn-primary btn-lg">Return to Math Resources</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    body.dark-mode .bg-light {
+        background-color: #2d2d2d !important;
+    }
+    
+    /* Equal heights for content boxes */
+    .equal-height-cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .equal-height-cards > [class*='col-'] {
+        display: flex;
+    }
+    
+    /* Content box styling */
+    .math-content-box {
+        border-radius: 10px;
+        border-top: 4px solid #1a73e8 !important;
+    }
+    
+    .math-content-box .card-title {
+        margin-bottom: 0;
+    }
+    
+    .content-divider {
+        height: 2px;
+        background-color: rgba(26, 115, 232, 0.1);
+        width: 60px;
+    }
+    
+    /* Dark mode adjustments */
+    body.dark-mode .math-content-box {
+        background-color: #2d2d2d;
+        border-top: 4px solid #4285f4 !important;
+    }
+    
+    body.dark-mode .content-divider {
+        background-color: rgba(66, 133, 244, 0.2);
+    }
+    
+    /* List styling */
+    .list-tight {
+        padding-left: 1.25rem;
+        margin-top: 0;
+    }
+    
+    .list-tight li {
+        margin-bottom: 0.25rem;
+        line-height: 1.4;
+    }
+    
+    .list-tight li:last-child {
+        margin-bottom: 0;
+    }
+</style>
+{% endblock %}

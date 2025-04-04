@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - Algebra{% endblock %}
+
+{% block content %}
+
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-4"><strong>Algebra for SAT</strong></h1>
+        <p class="lead">Master the fundamentals of algebra for the SAT Math section</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <h3 class="mb-4">Algebra Topics by Difficulty Level</h3>
+                
+                <div class="topic-container mb-4">
+                    <h4 class="topic-header">Linear Equations & Inequalities</h4>
+                    <ul class="topic-list">
+                        <li>
+                            <a href="{{ url_for('algebra_beginner_linear_equations') }}" class="topic-link">
+                                <span class="topic-text"><strong>Beginner:</strong> Linear Equations and Inequalities</span>
+                                <span class="difficulty-tag bg-success">Beginner</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('algebra_intermediate_linear_equations') }}" class="topic-link">
+                                <span class="topic-text"><strong>Intermediate:</strong> Linear Equations and Inequalities</span>
+                                <span class="difficulty-tag bg-warning">Intermediate</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('algebra_advanced_linear_equations') }}" class="topic-link">
+                                <span class="topic-text"><strong>Advanced:</strong> Linear Equations and Inequalities</span>
+                                <span class="difficulty-tag bg-danger">Advanced</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="topic-container mb-4">
+                    <h4 class="topic-header">Functions & Graphs</h4>
+                    <ul class="topic-list">
+                        <li>
+                            <a href="{{ url_for('algebra_beginner_graphs') }}" class="topic-link">
+                                <span class="topic-text"><strong>Beginner:</strong> Functions & Graphs</span>
+                                <span class="difficulty-tag bg-success">Beginner</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('algebra_intermediate_graphs') }}" class="topic-link">
+                                <span class="topic-text"><strong>Intermediate:</strong> Functions & Graphs</span>
+                                <span class="difficulty-tag bg-warning">Intermediate</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('algebra_advanced_graphs') }}" class="topic-link">
+                                <span class="topic-text"><strong>Advanced:</strong> Functions & Graphs</span>
+                                <span class="difficulty-tag bg-danger">Advanced</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="topic-container mb-4">
+                    <h4 class="topic-header">Solving Word Problems using Linear Equations</h4>
+                    <ul class="topic-list">
+                        <li>
+                            <a href="{{ url_for('algebra_beginner_word_problems') }}" class="topic-link">
+                                <span class="topic-text"><strong>Beginner:</strong> Solving Word Problems using Linear Equations</span>
+                                <span class="difficulty-tag bg-success">Beginner</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="topic-link">
+                                <span class="topic-text"><strong>Intermediate:</strong> Solving Word Problems using Linear Equations</span>
+                                <span class="difficulty-tag bg-warning">Intermediate</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('algebra_intermediate_word_problems') }}" class="topic-link">
+                                <span class="topic-text"><strong>Advanced:</strong> Solving Word Problems using Linear Equations</span>
+                                <span class="difficulty-tag bg-danger">Advanced</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="topic-container mb-4">
+                    <h4 class="topic-header">Solving Word Problems using Linear Relationship</h4>
+                    <ul class="topic-list">
+                        <li>
+                            <a href="{{ url_for('algebra_beginner_relationship_problems') }}" class="topic-link">
+                                <span class="topic-text"><strong>Beginner:</strong> Solving Word Problems using Linear Relationship</span>
+                                <span class="difficulty-tag bg-success">Beginner</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="topic-link">
+                                <span class="topic-text"><strong>Intermediate:</strong> Solving Word Problems using Linear Relationship</span>
+                                <span class="difficulty-tag bg-warning">Intermediate</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="topic-link">
+                                <span class="topic-text"><strong>Advanced:</strong> Solving Word Problems using Linear Relationship</span>
+                                <span class="difficulty-tag bg-danger">Advanced</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .list-group-item {
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .list-group-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1;
+    }
+    
+    body.dark-mode .list-group-item {
+        background-color: #2d2d2d;
+        color: #e0e0e0;
+        border-color: #444;
+    }
+    
+    body.dark-mode .list-group-item:hover {
+        background-color: #3a3a3a;
+    }
+    
+    .badge.bg-warning {
+        color: #212529;
+    }
+    
+    /* New styling for topic layout */
+    .topic-container {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 1.25rem;
+    }
+    
+    .topic-container:last-child {
+        border-bottom: none;
+    }
+    
+    .topic-header {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.75rem;
+    }
+    
+    .topic-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    
+    .topic-list li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .topic-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        background-color: #f8f9fa;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        color: #212529;
+        transition: all 0.2s ease;
+        column-gap: 10px; /* Control the gap between text and tag */
+    }
+    
+    .topic-link:hover {
+        background-color: #e9ecef;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .topic-text {
+        flex-grow: 1; /* Make text fill available space */
+    }
+    
+    .difficulty-tag {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-left: 0.5rem;
+        flex-shrink: 0;
+    }
+    
+    .bg-success {
+        background-color: #28a745;
+    }
+    
+    .bg-warning {
+        background-color: #ffc107;
+        color: #212529;
+    }
+    
+    .bg-danger {
+        background-color: #dc3545;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - Reading & Writing{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-4">SAT Reading & Writing</h1>
+        <p class="lead">Develop the critical skills needed to excel in the Evidence-Based Reading and Writing sections</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-8 offset-lg-2 text-center">
+        <a href="{{ url_for('tips_and_hacks') }}#reading-writing-hacks" class="btn btn-lg btn-danger mb-4">Reading & Writing Tips & Hacks</a>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-10 offset-lg-1">
+        <div class="card border-0 shadow mb-4">
+            <div class="card-body p-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="card-title">Reading Section</h2>
+                        <p class="card-text mb-2">The SAT Reading section measures your ability to understand, analyze, and interpret complex texts across a range of disciplines. You'll encounter passages from literature, historical documents, social sciences, and natural sciences.</p>
+                        <ul class="list-tight">
+                            <li>65 minutes total</li>
+                            <li>5 passages with 10-11 questions each</li>
+                            <li>52 multiple-choice questions in total</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <svg class="mb-3" width="120" height="120" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="11" fill="#f8f9fa" stroke="#aa2200" stroke-width="0.5"/>
+                            <path d="M6,3 H19 V17 C19,17 16,16 14,17 C12,18 10.5,18 9,17.5 C7.5,17 6,17 6,17 V3 Z" fill="#aa2200" opacity="0.9"/>
+                            <path d="M6,3 V17 M19,3 V17" stroke="#ffffff" stroke-width="0.5"/>
+                            <path d="M9,6 H16 M9,9 H16 M9,12 H14" stroke="#ffffff" stroke-width="0.75"/>
+                        </svg>
+                        <a href="#reading-resources" class="btn btn-primary">Reading Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5" id="reading-resources">
+    <div class="col-lg-12">
+        <h2 class="text-center mb-4">Reading Resources</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title">Reading Comprehension</h4>
+                        <p class="card-text mb-2">Learn to identify main ideas, supporting details, and the author's purpose. Practice techniques for understanding complex texts across different subject areas.</p>
+                        <ul class="list-tight">
+                            <li>Main idea identification</li>
+                            <li>Supporting details analysis</li>
+                            <li>Inference skills development</li>
+                            <li>Author's purpose and tone</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary mt-3">Start Learning</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title">Vocabulary in Context</h4>
+                        <p class="card-text mb-2">Develop strategies for determining the meaning of unfamiliar words through context clues. Master common vocabulary found on the SAT.</p>
+                        <ul class="list-tight">
+                            <li>Context clues techniques</li>
+                            <li>Word roots and affixes</li>
+                            <li>Common SAT vocabulary</li>
+                            <li>Synonym/antonym recognition</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary mt-3">Start Learning</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title">Evidence-Based Questions</h4>
+                        <p class="card-text mb-2">Learn to find and interpret textual evidence to support your understanding of what the passages say explicitly and implicitly.</p>
+                        <ul class="list-tight">
+                            <li>Identifying textual evidence</li>
+                            <li>Interpreting graphics and data</li>
+                            <li>Drawing conclusions</li>
+                            <li>Analyzing multiple sources</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary mt-3">Start Learning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5" id="writing-resources">
+    <div class="col-lg-12">
+        <h2 class="text-center mb-4">Writing Resources</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title">Grammar & Mechanics</h4>
+                        <p class="card-text mb-2">Master the rules of English grammar, punctuation, and sentence structure that are tested on the SAT.</p>
+                        <ul class="list-tight">
+                            <li>Subject-verb agreement</li>
+                            <li>Pronoun usage</li>
+                            <li>Punctuation rules</li>
+                            <li>Sentence boundaries</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary mt-3">Start Learning</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title">Expression of Ideas</h4>
+                        <p class="card-text mb-2">Learn to improve the effectiveness of written expression by organizing ideas, developing arguments, and using precise language.</p>
+                        <ul class="list-tight">
+                            <li>Organization and structure</li>
+                            <li>Transitions and relationships</li>
+                            <li>Concision and precision</li>
+                            <li>Style and tone</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary mt-3">Start Learning</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title">Rhetorical Skills</h4>
+                        <p class="card-text mb-2">Develop the ability to analyze, evaluate, and improve the effectiveness of arguments and rhetoric in texts.</p>
+                        <ul class="list-tight">
+                            <li>Claim identification</li>
+                            <li>Evidence evaluation</li>
+                            <li>Logical reasoning</li>
+                            <li>Rhetorical devices</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary mt-3">Start Learning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-lg-8 offset-lg-2 text-center">
+        <div class="p-5 bg-light rounded">
+            <h2 class="mb-4">Ready to master SAT Reading & Writing?</h2>
+            <p class="lead mb-4">Start with our comprehensive preparation plan designed to boost your verbal skills.</p>
+            <a href="#" class="btn btn-lg btn-success">Begin Your Reading & Writing Journey</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    body.dark-mode .bg-light {
+        background-color: #2d2d2d !important;
+    }
+    
+    /* Section divider */
+    #reading-resources, 
+    #writing-resources {
+        padding-top: 40px;
+        margin-top: 20px;
+    }
+    
+    /* SVG icon colors in dark mode */
+    body.dark-mode svg circle {
+        fill: #2d2d2d;
+    }
+    
+    body.dark-mode svg path[fill="#aa2200"] {
+        fill: #d83a2c;
+    }
+    
+    /* Remove spacing between paragraphs and lists */
+    .card-text.mb-2 {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .list-tight {
+        padding-left: 1.25rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .list-tight li {
+        margin-bottom: 0.25rem;
+        line-height: 1.4;
+    }
+    
+    .list-tight li:last-child {
+        margin-bottom: 0;
+    }
+</style>
+{% endblock %}

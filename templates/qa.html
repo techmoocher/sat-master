@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - Q&A Forum{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-4"><strong>SAT Q&A Forum</strong></h1>
+        <p class="lead">Connect with fellow test-takers, ask questions, and share your knowledge</p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card shadow border-0 mb-4">
+            <div class="card-body p-4">
+                <h2 class="card-title text-center mb-4">Welcome to Our Community</h2>
+                <p>The SAT Master Q&A Forum is a supportive community where you can:</p>
+                <ul class="list-tight mb-4">
+                    <li>Ask questions about specific SAT concepts you're struggling with</li>
+                    <li>Share your strategies and tips with fellow test-takers</li>
+                    <li>Get feedback on your study approach from experienced members</li>
+                    <li>Find study buddies and stay motivated throughout your preparation</li>
+                </ul>
+                <div class="text-center">
+                    <p class="fw-bold">Coming Soon!</p>
+                    <p>We're currently setting up our Q&A platform. Sign up for our newsletter to be notified when it launches!</p>
+                    <form class="row g-3 justify-content-center mt-3">
+                        <div class="col-auto">
+                            <input type="email" class="form-control" id="email" placeholder="Your email">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Notify Me</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow border-0">
+            <div class="card-body p-4">
+                <div class="text-center mb-3">
+                    <i class="fas fa-question-circle text-primary" style="font-size: 3rem;"></i>
+                </div>
+                <h3 class="card-title text-center">Get Your Questions Answered</h3>
+                <p>Stuck on a problem? Not sure about a concept? Our community of tutors and fellow students are here to help. No question is too small or too complex.</p>
+                <p class="fst-italic text-center mt-3">"The only bad question is the one you don't ask!"</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow border-0">
+            <div class="card-body p-4">
+                <div class="text-center mb-3">
+                    <i class="fas fa-users text-primary" style="font-size: 3rem;"></i>
+                </div>
+                <h3 class="card-title text-center">Join a Supportive Community</h3>
+                <p>Connect with other students who are on the same journey. Share your progress, celebrate wins, and support each other through challenges.</p>
+                <p class="fst-italic text-center mt-3">"Success is best when it's shared."</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 offset-lg-2 text-center">
+        <div class="p-5 bg-light rounded">
+            <h2 class="mb-4">Have a Question Now?</h2>
+            <p class="lead mb-4">While our forum is being built, you can still reach out with any questions!</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-lg btn-primary">Contact Us</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .fas {
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover .fas {
+        transform: scale(1.2);
+    }
+    
+    /* More specific form styling */
+    .form-control:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 0 0.25rem rgba(26, 115, 232, 0.25);
+    }
+</style>
+{% endblock %}

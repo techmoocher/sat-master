@@ -1,0 +1,473 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Resources{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4 text-center">SAT Resources Library</h1>
+    <p class="lead text-center mb-5">Access our comprehensive collection of SAT preparation materials organized by category</p>
+
+    <!-- Search bar -->
+    <div class="row mb-5">
+        <div class="col-md-8 mx-auto">
+            <div class="input-group">
+                <input type="text" id="resourceSearch" class="form-control" placeholder="Search resources...">
+                <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Math Resources -->
+    <div class="resource-category mb-5">
+        <div class="category-header">
+            <h2><i class="fas fa-square-root-alt"></i> Math Resources</h2>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon pdf-icon">
+                        <i class="far fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>SAT Math Formula Sheet</h5>
+                        <p>Complete list of formulas you need for the math section</p>
+                        <a href="{{ url_for('static', filename='documents/Formula-Sheet-for-SAT-Math.pdf') }}" class="btn btn-sm btn-primary" download>Download PDF</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Algebra</h5>
+                        <p>Practice worksheets covering all algebra topics</p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Algebra.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Keys/Algebra-keys.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Problem-Solving & Data Analytics</h5>
+                        <p>Walkthrough of effective problem-solving questions approach</p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Problem-Solving.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Keys/Problem-Solving-keys.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Geometry & Trigonometry</h5>
+                        <p>Review of key geometry concepts with examples</p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Geometry-and-Trigonometry.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Keys/Geometry-and-Trigonometry-keys.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Advanced Math</h5>
+                        <p>Comprehensive guide through advanced math on SAT</p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Advanced-Math.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Keys/Advanced-Math-keys.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Math Drills</h5>
+                        <p>Still craving for resouces? Check out our specially designed drills for Math.</p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/Drills/Math-Drills.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/Drills/Keys/Math-Drills-keys.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reading & Writing Resources -->
+    <div class="resource-category mb-5">
+        <div class="category-header">
+            <h2><i class="fas fa-book"></i> Reading & Writing Resources</h2>
+        </div>
+        <div class="row mt-4">
+            <!-- <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon worksheet-icon">
+                        <i class="far fa-file-alt"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Common vocabs for SAT</h5>
+                        <p>Build your SAT vocabulary to prepare for the test. <i>(source: <a href="https://www.test-ninjas.com" target="_blank">test-ninjas.com</a>)</i></p>
+                        <a href="{{ url_for('static', filename='documents/Digital-SAT-Vocab-List.pdf') }}" class="btn btn-sm btn-primary" download>Download PDF</a>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon worksheet-icon">
+                        <i class="far fa-file-alt"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Reading Comprehension</h5>
+                        <p>Effective techniques for dealing with hard reading comprehension tasks. <i>(working!)</i></p>
+                        <a href="#" class="btn btn-sm btn-primary">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Craft and Structure</h5>
+                        <p>Challenge yourself daily with craft and structure questions.</p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Craft-and-Structure.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Keys/Craft-and-Structure-keys.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Expression of Ideas</h5>
+                        <p>Practice methods of quicly identifying key ideas from the text.</p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Expression-of-Ideas.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Keys/Expression-of-Ideas-keys.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Information and Ideas</h5>
+                        <p>Struggling to comprehend the text? Practice everyday to master this skills.</p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Information-and-Ideas.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Keys/Information-and-Ideas-keys.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Standard English Conventions</h5>
+                        <p>Develop a strong grammar skill to ace the grammar section.</p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Standard-English-Conventions.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/SAT-Suite/Keys/Standard-English-Conventions-keys.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Resources-->
+    <div class="resource-category mb-5">
+        <div class="category-header">
+            <h2><i class="fa-solid fa-dumbbell"></i> Additional Resouces</h2>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Practice Tests</h5>
+                        <p>Everyday practice with materials from <a href="https://www.cracksat.net/index.html" target="_blank">cracksat.net</a></p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/Crack-SAT/Practice-Tests.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/Crack-SAT/Explanations.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>SAT Math Practice</h5>
+                        <p>Sharpen your Math skills with practice from <a href="https://www.cracksat.net/index.html" target="_blank">cracksat.net</a></p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/Crack-SAT/SAT-Math.zip') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download ZIP</a>
+                            <a href="{{ url_for('static', filename='documents/Crack-SAT/SAT-Math-ans.zip') }}" class="btn btn-sm btn-success flex-grow-1" download>Download Keys</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon zip-icon">
+                        <i class="far fa-file-archive"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Vocabulary Lists</h5>
+                        <p>Collect your daily vocab items to ace SAT Reading & Writing.</p>
+                        <div class="d-flex button-container">
+                            <a href="{{ url_for('static', filename='documents/SAT-Vocab-1.pdf') }}" class="btn btn-sm btn-primary flex-grow-1 me-2" download>Download List 1</a>
+                            <a href="{{ url_for('static', filename='documents/SAT-Vocab-2.pdf') }}" class="btn btn-sm btn-success flex-grow-1" download>Download List 2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Study Guides -->
+    <div class="resource-category mb-5">
+        <div class="category-header">
+            <h2><i class="fas fa-graduation-cap"></i> Study Guides</h2>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon pdf-icon">
+                        <i class="far fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>8-Week SAT Study Plan</h5>
+                        <p>Effective plan for getting you well-prepared.</p>
+                        <a href="{{ url_for('static', filename='documents/Eight-week-study-plan.pdf') }}" class="btn btn-sm btn-primary" download>Download PDF</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon pdf-icon">
+                        <i class="far fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Last-Minute Study Guide</h5>
+                        <p>Quick review of essential concepts and strategies</p>
+                        <a href="#" class="btn btn-sm btn-primary">Download PDF</a>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="resource-card">
+                    <div class="resource-icon pdf-icon">
+                        <i class="far fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-details">
+                        <h5>Test Day Checklist</h5>
+                        <p>What to bring to your test on test day.</p>
+                        <a href="{{ url_for('static', filename='documents/Test-day-checklist.pdf') }}" class="btn btn-sm btn-primary" download>Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Resources page specific styles */
+    .resource-category {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .category-header {
+        padding: 15px 20px;
+        background-color: #f8f9fa;
+        border-left: 5px solid #1a73e8;
+        border-radius: 5px;
+    }
+    
+    .category-header h2 {
+        margin: 0;
+        color: #333;
+        font-size: 1.8rem;
+    }
+    
+    .category-header i {
+        margin-right: 10px;
+        color: #1a73e8;
+    }
+    
+    .resource-card {
+        display: flex;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        height: 100%;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .resource-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    
+    .resource-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    
+    .pdf-icon {
+        background-color: #ffebee;
+    }
+    
+    .pdf-icon i {
+        color: #f44336;
+    }
+    
+    .zip-icon {
+        background-color: #fff8e1;
+    }
+    
+    .zip-icon i {
+        color: #ffa000;
+    }
+    
+    .keys-icon {
+        background-color: #e8f5e9;
+    }
+    
+    .keys-icon i {
+        color: #4caf50;
+    }
+    
+    .worksheet-icon {
+        background-color: #e3f2fd;
+    }
+    
+    .worksheet-icon i {
+        color: #2196f3;
+    }
+    
+    .video-icon {
+        background-color: #e8f5e9;
+    }
+    
+    .video-icon i {
+        color: #4caf50;
+    }
+    
+    .resource-details {
+        flex-grow: 1;
+    }
+    
+    .resource-details h5 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .resource-details p {
+        margin-bottom: 15px;
+        color: #666;
+        font-size: 0.9rem;
+    }
+    
+    /* Buttons in resource cards */
+    .button-container .btn {
+        min-width: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    /* Ensure consistent height for buttons */
+    .resource-card .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 31px;  /* Standard height for all buttons */
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Search functionality for resources
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('resourceSearch');
+        
+        if (searchInput) {
+            searchInput.addEventListener('keyup', function() {
+                const searchTerm = this.value.toLowerCase();
+                const resourceCards = document.querySelectorAll('.resource-card');
+                
+                resourceCards.forEach(card => {
+                    const title = card.querySelector('h5').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                        card.closest('.col-md-6').style.display = '';
+                    } else {
+                        card.closest('.col-md-6').style.display = 'none';
+                    }
+                });
+                
+                // Check if any cards are visible in each category
+                document.querySelectorAll('.resource-category').forEach(category => {
+                    const visibleCards = category.querySelectorAll('.col-md-6[style=""]').length;
+                    if (visibleCards === 0 && searchTerm !== '') {
+                        category.style.display = 'none';
+                    } else {
+                        category.style.display = '';
+                    }
+                });
+            });
+        }
+    });
+</script>
+{% endblock %}

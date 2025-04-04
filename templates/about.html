@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}SAT Master - About Us{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-md-12 text-center">
+        <h1 class="display-4"><strong>About SAT Master</strong></h1>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="row mb-5">
+    <!-- <div class="col-lg-6">
+        <h2 class="mb-4">Our Mission</h2>
+        <p class="mb-4">At SAT Master, we're dedicated to making high-quality SAT prep materials accessible to all students. Our mission is to equip students with necessary knowledge, skills, and strategies to achieve their dream scores on the SAT exam.</p>
+        <p>We believe that with the right resources and guidance, every student can improve their test-taking abilities and open doors to greater educational opportunities.</p>
+    </div> -->
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="card-title">Our Mission</h3>
+                <p class="card-text">At SAT Master, we're dedicated to making high-quality SAT prep materials accessible to all students. Our mission is to equip students with necessary knowledge, skills, and strategies to achieve their dream scores on the SAT exam.</p>
+                <p class="card-text mb-0">We believe that with the right resources and guidance, every student can improve their test-taking abilities and open doors to greater educational opportunities.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="card-title">Why We Started</h3>
+                <p class="card-text">SAT Master was founded in 2025 by a group of dedicated students who recognized a gap in the test preparation market. We saw that many students could not afford expensive coaching centers or private tutors, yet needed more support than generic study guides could provide. Furthermore, many struggle in searching for necessary materials.</p>
+                <p class="card-text mb-0">Our platform is created with an aim to bridging this gap, offering interactive, and comprehensive SAT preparation for everyone.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card bg-light border-0">
+            <div class="card-body p-5">
+                <h3 class="mb-4">Our Approach to SAT Preparation</h3>
+                <p>We believe effective SAT preparation involves three key components:</p>
+                
+                <div class="d-flex mb-4">
+                    <div class="me-3">
+                        <span class="badge bg-primary rounded-circle p-3">1</span>
+                    </div>
+                    <div>
+                        <h5>Content Mastery</h5>
+                        <p class="mb-0">Understanding the fundamental concepts and knowledge areas tested on the SAT</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex mb-4">
+                    <div class="me-3">
+                        <span class="badge bg-primary rounded-circle p-3">2</span>
+                    </div>
+                    <div>
+                        <h5>Strategy Development</h5>
+                        <p class="mb-0">Learning techniques specific to the SAT format and question types</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex">
+                    <div class="me-3">
+                        <span class="badge bg-primary rounded-circle p-3">3</span>
+                    </div>
+                    <div>
+                        <h5>Practice & Review</h5>
+                        <p class="mb-0">Applying knowledge through realistic practice and thorough analysis of mistakes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 text-center mb-4">
+        <h2>Our Team</h2>
+        <p class="lead mb-5">Meet the dedicated educators and developers behind SAT Master</p>
+    </div>
+    
+    <div class="col-md-4 mb-4 text-center">
+        <img src="{{ url_for('static', filename='images/ndvphuc.png') }}" alt="Team Member" class="img-fluid mb-3 rounded" style="width: 200px; height: 250px; object-fit: cover;">
+        <h4>Phuc (Benjamin) Nguyen</h4>
+        <p class="text-muted">Co-founder & Director</p>
+        <p>Former SAT test-taker who is currently working as a volunteer tutor in SAT in Schoolhouse.</p>
+    </div>
+    
+    <div class="col-md-4 mb-4 text-center">
+        <img src="{{ url_for('static', filename='images/nhphong.jpg') }}" alt="Team Member" class="img-fluid mb-3 rounded" style="width: 200px; height: 250px; object-fit: cover;">
+        <h4>Phong Nguyen</h4>
+        <p class="text-muted">Co-founder & R&W Specialist</p>
+        <p>Former SAT test-taker who is currently working as private volunteer tutor in SAT.</p>
+    </div>
+    
+    <div class="col-md-4 mb-4 text-center">
+        <img src="{{ url_for('static', filename='images/dldtai.jpg') }}" alt="Team Member" class="img-fluid mb-3 rounded" style="width: 200px; height: 250px; object-fit: cover;">
+        <h4>Duc-Tai Doan-Luu</h4>
+        <p class="text-muted">Technology Lead & Math Specialist</p>
+        <p>Former SAT test-taker who is currently working as private Math tutor.</p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-8 offset-md-2 text-center">
+        <h3>Ready to begin your SAT success journey?</h3>
+        <p class="lead">Join thousands of students who have achieved their target scores with SAT Master.</p>
+        <div class="mt-4">
+            <!-- <a href="{{ url_for('courses') }}" class="btn btn-lg btn-primary mx-2">Explore Our Courses</a>
+            <a href="{{ url_for('contact') }}" class="btn btn-lg btn-outline-secondary mx-2">Contact Us</a> -->
+            <a href="{{ url_for('contact') }}" class="btn btn-lg btn-primary mx-2">Contact Us</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
